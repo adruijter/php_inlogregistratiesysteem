@@ -25,8 +25,7 @@
 				echo '<h'.$i.'>De waarde van $i is: '.$i.'</h'.$i.'>';
 				$i--;
 			
-			}while($i > 0)
-		
+			}while($i > 0)		
 		?>
 	</body>
 </html>
