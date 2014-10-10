@@ -28,13 +28,19 @@
 		<hr>
 		<h3>Even getallen van nul tot met twintig</h3>
 		<?php
-		for ($i = 0; $i ???; $i ???)
+		for ($i = 0; $i <=20;  $i += 2)
 		{
-			echo $i."<br>";			
+			echo $i."<br> ";
 		}
 		?>
-		
-
-
+		<!-- schrijf alleen de oneven getallen 1, 3, 5, 7,... op het scherm -->
+		<hr>
+		<h3>Even getallen van nul tot met twintig</h3>
+		<?php
+		for ($i = 1; $i <=20;  $i += 2)
+		{
+			echo $i."<br> ";
+		}
+		?>
 	</body>
 </html>
