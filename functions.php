@@ -43,6 +43,18 @@
 				return "De uitkomst van $getal1 en $getal2 is: ".$uitkomst;
 			}
 			
+			/* Maak een functie met de naam modulo. Deze functie heeft twee argumenten. De eerste '$getal1' is een getal tussen 0 en 100. Het tweede getal '$modulo' is een getal tussen 0 en 5.
+			Gebruik in de functie een for-loop (bereik 0 t/m $getal1) en echo de uitkomst van $getal1 % $modulo naar het scherm.
+			modulo(5, 2)
+			0 % 2 = 0
+			1 % 2 = 1
+			2 % 2 = 0
+			3 % 2 = 1
+			4 % 2 = 0
+			5 % 2 = 1
+			
+			*/
+			
 		?>
 		
 		<hr>
