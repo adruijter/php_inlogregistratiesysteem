@@ -55,6 +55,14 @@
 			
 			*/
 			
+			function modulo($getal1, $modulo)
+			{
+				for ( $i=0; $i <= $getal1; $i++)
+				{
+					echo $i." % ".$modulo." = 4<br>";				
+				}			
+			}
+			
 		?>
 		
 		<hr>
@@ -64,6 +72,7 @@
 			weergevenNaam(2,"Bert", "de", "Vries");
 			echo bereken(4,6, "-")."<br>";
 			echo bereken(347, 3, "*")."<br>";
+			modulo(5,2);
 		?>
 	
 	<body>
