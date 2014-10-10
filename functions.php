@@ -105,7 +105,7 @@
 			
 			$a = 5;
 			callByReference($a);
-			echo "Uitkomst call by value: ".$a;
+			echo "Uitkomst call by Reference: ".$a;
 			
 		?>
 		
@@ -118,6 +118,10 @@
 			echo bereken(347, 3, "*")."<br>";
 			modulo(10,5);
 			echo moduloReturn(10,5);
+			
+			// Dit is een PHP ingebouwde functie voor de tijd
+			date_default_timezone_set("Europe/Amsterdam");
+			echo Date("d/m/Y H:i:s");
 		?>
 	
 	<body>
