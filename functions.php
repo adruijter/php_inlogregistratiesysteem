@@ -59,9 +59,53 @@
 			{
 				for ( $i=0; $i <= $getal1; $i++)
 				{
-					echo $i." % ".$modulo." = 4<br>";				
+					$uitkomst = $i % $modulo;
+					echo $i." % ".$modulo." = ".$uitkomst."<br>";				
 				}			
 			}
+			
+			function moduloReturn($getal1, $modulo)
+			{
+				$returnWaarde = "";
+				for ( $i=0; $i <= $getal1; $i++)
+				{
+					$uitkomst = $i % $modulo;
+					$returnWaarde .= $i." % ".$modulo." = ".$uitkomst."<br>";				
+				}
+				return $returnWaarde;
+			}
+			
+			$watTekst = "Dit is wat tekst";
+			function scope($tekst)
+			{
+				//global $watTekst;
+				echo "De uitkomst van het experiment staat hier: ".$tekst;			
+			}
+			
+			scope($watTekst);
+			
+			
+			/* Call by Value */
+			
+			function callByValue($a)
+			{
+				$a++;
+			}
+			
+			$a = 5;
+			callByValue($a);
+			echo "Uitkomst call by value: ".$a;
+			
+			/* Call by Reference */
+			
+			function callByReference(&$a)
+			{
+				$a++;
+			}
+			
+			$a = 5;
+			callByReference($a);
+			echo "Uitkomst call by value: ".$a;
 			
 		?>
 		
@@ -72,7 +116,8 @@
 			weergevenNaam(2,"Bert", "de", "Vries");
 			echo bereken(4,6, "-")."<br>";
 			echo bereken(347, 3, "*")."<br>";
-			modulo(5,2);
+			modulo(10,5);
+			echo moduloReturn(10,5);
 		?>
 	
 	<body>
