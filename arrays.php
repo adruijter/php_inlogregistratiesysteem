@@ -109,23 +109,40 @@
 		<?php
 			// Echo op het scherm dat pindakaas in het array zit, anders dat het er niet in zit.
 			
-			$product = "Pindakaas";
 			
-			if ( in_array($product, $prijsProduct))
-			{
-				echo $product." staat in mijn boodschappenlijstje<br>";
-				//Op deze plek wil ik de prijs van het product naar het scherm echo-en
-				echo "De prijs is: ".array_search($product, $prijsProduct);
-			}
-			else
-			{
-				echo $product." staat niet in mijn boodschappenlijstje";
-			}
 		?>
-		
+		<!--
 		Maak nu van bovenstaand voorbeeld een functie. De functie krijgt als argumenten mee: Het te zoeken product( pindakaas ) en de naam van het array.
 		De functie heeft als output de bovenstaande echo regels. Als het het product gevonden is wordt dus ook de prijs genoemd.
 		
 		vindMijnProduct("Jam", $prijsProduct);
+		
+		
+		Maak een mini-array van drie elementen en gebruik dezelfde onaangepaste functie vindMijnProduct om te zien of het product in het array zit
+		-->
+		
+		
+		
+		<?php
+			function vindMijnProduct($product, $array)
+			{
+				if ( in_array($product, $array))
+				{
+					echo $product." staat in mijn boodschappenlijstje<br>";
+					//Op deze plek wil ik de prijs van het product naar het scherm echo-en
+					echo "De prijs is: ".array_search($product, $array);
+				}
+				else
+				{
+					echo $product." staat niet in mijn boodschappenlijstje";
+				}			
+			}
+
+			vindMijnProduct("Drop", $prijsProduct)."<br>";
+			vindMijnProduct("Lendebiefstuk", $prijsProduct)."<br>";
+			
+		?>
+		
+		
 	</body>
 </html>
