@@ -96,9 +96,31 @@
 		?>
 		<hr>
 		<?php
-			array_push();
-		
+			array_push($prijsProduct,  "Fruitella", "drop");
+			foreach ($prijsProduct as $key => $value)
+			{
+				echo $value." kost ".$key."<br>";
+			}
+			
 		?>
+		
+		<hr>
+		
+		<?php
+			// Echo op het scherm dat pindakaas in het array zit, anders dat het er niet in zit.
+			
+			$product = "Pindakaas";
+			
+			if ( in_array($product, $prijsProduct))
+			{
+				echo $product." staat in mijn boodschappenlijstje";
+			}
+			else
+			{
+				echo $product." staat niet in mijn boodschappenlijstje";
+			}
+		?>
+		
 		
 	</body>
 </html>
