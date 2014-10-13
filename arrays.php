@@ -81,6 +81,23 @@
 				echo "De ".$value." kost ".$key."<br>";
 			
 			}
+			
+			echo "De ingebouwde PHP functie count() geeft deze waarde: ".count($prijsProduct)."<br>";
+			echo "De ingebouwde PHP functie sizeof() geeft deze waarde: ".sizeof($prijsProduct)."<br>";
+			
+			echo count($prijsProduct)."<br>";
+			$eersteElement = array_shift($prijsProduct);
+			echo "Het eerste element van array prijsProduct is: ".$eersteElement."<br>";
+			$eersteElement = array_shift($prijsProduct);
+			echo "Het eerste element van array prijsProduct is: ".$eersteElement."<br>";
+			$eersteElement = array_shift($prijsProduct);
+			echo "Het eerste element van array prijsProduct is: ".$eersteElement."<br>";
+			echo count($prijsProduct)."<br>";
+		?>
+		<hr>
+		<?php
+			array_push();
+		
 		?>
 		
 	</body>
