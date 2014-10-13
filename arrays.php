@@ -113,7 +113,9 @@
 			
 			if ( in_array($product, $prijsProduct))
 			{
-				echo $product." staat in mijn boodschappenlijstje";
+				echo $product." staat in mijn boodschappenlijstje<br>";
+				//Op deze plek wil ik de prijs van het product naar het scherm echo-en
+				echo "De prijs is: ".array_search($product, $prijsProduct);
 			}
 			else
 			{
@@ -121,6 +123,9 @@
 			}
 		?>
 		
+		Maak nu van bovenstaand voorbeeld een functie. De functie krijgt als argumenten mee: Het te zoeken product( pindakaas ) en de naam van het array.
+		De functie heeft als output de bovenstaande echo regels. Als het het product gevonden is wordt dus ook de prijs genoemd.
 		
+		vindMijnProduct("Jam", $prijsProduct);
 	</body>
 </html>
