@@ -130,19 +130,47 @@
 				{
 					echo $product." staat in mijn boodschappenlijstje<br>";
 					//Op deze plek wil ik de prijs van het product naar het scherm echo-en
-					echo "De prijs is: ".array_search($product, $array);
+					echo "De prijs is: ".array_search($product, $array)."<br>";
 				}
 				else
 				{
-					echo $product." staat niet in mijn boodschappenlijstje";
+					echo $product." staat niet in mijn boodschappenlijstje<br>";
 				}			
 			}
 
-			vindMijnProduct("Drop", $prijsProduct)."<br>";
-			vindMijnProduct("Lendebiefstuk", $prijsProduct)."<br>";
+			vindMijnProduct("Drop", $prijsProduct);
+			vindMijnProduct("Lendebiefstuk", $prijsProduct);
 			
 		?>
 		
+		<hr>
+		
+		<?php
+		$bakker = array("1.23" => "stokbrood",
+						"2.67" => "Volkoren Vloer",
+						"4.23" => "Casino");
+		var_dump($bakker);
+		
+		vindMijnProduct("Volkoren Vloer", $bakker);
+		
+		?>
+		
+		<!-- Maak een functie die de waarde van het eerste element van een array
+		teruggeeft. Gebruik in je functie return. (maak gebruikt van array_shift)
+		De output wordt. Het eerste element van het array heeft de waarde: stokbrood-->
+		<hr>
+		
+		
+		<?php
+		function eersteElementArray($array)
+		{
+			$eersteElement = array_shift($array);
+			echo "Het eerste element uit het array is: ".$eersteElement."<br>";
+		}
+		
+		eersteElementArray($bakker);
+		eersteElementArray($prijsProduct);
+		?>
 		
 	</body>
 </html>
