@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -29,11 +30,15 @@
 		<?php
 			if (isset($_POST["submit"]))
 			{
+				session_start();
+				$_SESSION['name'] = $_POST['name'];
+				var_dump($_SESSION);
+				
 				echo "De ingevulde naam is: ".$_POST['name']."<br>";
 				echo $_SERVER["HTTP_ORIGIN"].$_SERVER["PHP_SELF"]."<br>";
 				echo "De formuliergegevens worden verstuurd van IP-adres: ".
 						$_SERVER["SERVER_ADDR"];
-				
+				echo "<a href='session_test.php'>volgende pagina</a>";
 			}
 			else
 			{
