@@ -43,7 +43,7 @@
 				echo "De ingevulde naam is: ".$_POST['voornaam']."<br>";
 				
 				move_uploaded_file($_FILES['selfie']['tmp_name'],
-				"c:/wamp/www/2014-2015/inlogregistratiesysteem/images");
+				"c:/wamp/www/2014-2015/inlogregistratiesysteem/images/".$_FILES['selfie']['name']);
 				
 				
 				echo "<img src='images/".$_FILES['selfie']['name']."' alt='dit is een plaatjes' width='200'/>";
