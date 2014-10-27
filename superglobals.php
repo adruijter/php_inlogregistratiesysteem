@@ -42,11 +42,18 @@
 				
 				echo "De ingevulde naam is: ".$_POST['voornaam']."<br>";
 				
+				// Verplaats het tijdelijke bestand naar de images map
 				move_uploaded_file($_FILES['selfie']['tmp_name'],
 				"c:/wamp/www/2014-2015/inlogregistratiesysteem/images/".$_FILES['selfie']['name']);
 				
+				// Verplaats het tijdelijke bestand naar de images map
+				move_uploaded_file($_FILES['huisdier']['tmp_name'],
+				"c:/wamp/www/2014-2015/inlogregistratiesysteem/images/".$_FILES['huisdier']['name']);
+				
 				
 				echo "<img src='images/".$_FILES['selfie']['name']."' alt='dit is een plaatjes' width='200'/>";
+				
+				echo "<img src='images/".$_FILES['huisdier']['name']."' alt='dit is een plaatjes' width='200'/>";
 				
 				echo $_SERVER["HTTP_ORIGIN"].$_SERVER["PHP_SELF"]."<br>";
 				echo "De formuliergegevens worden verstuurd van IP-adres: ".
@@ -62,7 +69,10 @@
 			tussenvoegsel: <input type='text' name='tussenvoegsel' /><br>
 			achternaam: <input type='text' name='achternaam' /><br>
 			foto: <input type='file' name='selfie' ><br>
-				  <input type='submit' name='submit' value='verstuur' />		
+				  
+			huisdier: <input type='file' name='huisdier' /><br>
+			
+			<input type='submit' name='submit' value='verstuur' />	
 		</form>
 		
 		
