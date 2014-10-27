@@ -18,6 +18,12 @@
 		<title>Cookies</title>
 	</head>
 	<body>
+		<?php
+		if (isset($_COOKIE["welkom"]))
+		{
+			echo $_COOKIE["welkom"]." welkom op onze site. Wij kennen u nog van de vorige keer";
+		}
+		?>
 		<h3>Deze site maakt gebruik van cookies!</h3>			
 		
 		<form action='<?php	echo $_SERVER['SCRIPT_NAME']; ?>' method='post' >
