@@ -172,5 +172,7 @@
 		eersteElementArray($prijsProduct);
 		?>
 		
+		
+		
 	</body>
 </html>
