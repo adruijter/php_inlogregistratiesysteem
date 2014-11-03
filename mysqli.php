@@ -52,16 +52,12 @@
 						   `achternaam`
 					FROM `user`";
 					
-			echo $sql."<br>";
+			//echo $sql."<br>";
 			
 			// Vuur de query af op de database
 			$result = mysqli_query($connection,$sql);
 			
-			// We lezen het result uit en stoppen het in een array
-			while ($record = mysqli_fetch_array($result))
-			{
-				echo $record["voornaam"]." ".$record["tussenvoegsel"]."<br>";
-			}
+			
 ?>
 			<!DOCTYPE html>
 			<html>
@@ -89,7 +85,17 @@
 						
 						<!-- Opdracht: Maak een tabel voor het weergeven van de velden
 							 id, voornaam, tussenvoegsel, achternaam en zet er handmatig
-							 drie namen in -->				
+							 drie namen in -->	
+						<?php
+						// We lezen het result uit en stoppen het in een array
+							while ($record = mysqli_fetch_array($result))
+							{
+								echo $record["id"]." ".			 
+									 $record["voornaam"]." ".
+									 $record["tussenvoegsel"]." ".
+									 $record["achternaam"]."<br>";
+							}
+						?>
 						<table>
 							<caption>Gebruikers</caption>
 							<tr>
