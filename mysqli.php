@@ -45,6 +45,23 @@
 		}
 		else
 		{
+			// Maak een query die alle velden uit de tabel user selecteert.
+			$sql = "SELECT `id`,
+						   `voornaam`,
+						   `tussenvoegsel`,
+						   `achternaam`
+					FROM `user`";
+					
+			echo $sql."<br>";
+			
+			// Vuur de query af op de database
+			$result = mysqli_query($connection,$sql);
+			
+			// We lezen het result uit en stoppen het in een array
+			while ($record = mysqli_fetch_array($result))
+			{
+				echo $record["voornaam"]." ".$record["tussenvoegsel"]."<br>";
+			}
 ?>
 			<!DOCTYPE html>
 			<html>
@@ -53,7 +70,7 @@
 					<style>
 						table, th, td
 						{
-							border:2px solid grey;
+							border:2px solid blue;
 							border-collapse:collapse;
 							padding:0.5em 1em;
 						}			
