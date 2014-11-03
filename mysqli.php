@@ -1,9 +1,6 @@
 <?php
 	if (isset($_POST['submit']))
 	{
-		/*
-		echo "Er is op de submitknop gedrukt en we gaan de gegevens opslaan in de database";
-		*/
 		// Definieer severname, usernaam, wachtwoord en databasenaam
 		$servername = 'localhost';
 		$username = 'root';
@@ -30,10 +27,12 @@
 										'".$_POST['voornaam']."',
 										'".$_POST['tussenvoegsel']."',
 										'".$_POST['achternaam']."');";
-			echo $sql."<br>";
+			//echo $sql."<br>";
 			
 			$send = mysqli_query($connection, $sql);
-			var_dump($send);
+			
+			//var_dump($send);
+			
 			if (!$send)
 			{
 				echo "Uw ingevulde gegevens hebben ons niet bereikt. Probeer het<br>
@@ -42,7 +41,8 @@
 			}
 			else
 			{
-				
+				echo "Uw ingevulde gegevens hebben ons bereikt. Dank voor het registreren";
+				header("refresh:5;url=mysqli.php");
 			}			
 		}		
 	}
