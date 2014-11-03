@@ -7,7 +7,7 @@
 		$cookie_value = "Hallo ".$_POST['voornaam']." "
 								.$_POST['tussenvoegsel']." "
 								.$_POST['achternaam'];
-		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+		setcookie($cookie_name, $cookie_value, time() + (4000), "/");
 	}
 	else
 	{		
