@@ -1,24 +1,22 @@
 <?php
-	if (isset($_POST['submit']))
+	// Definieer severname, usernaam, wachtwoord en databasenaam
+	$servername = 'localhost';
+	$username = 'root';
+	$password = '';
+	$databasename = 'blok1-am1a';
+	
+	// Maak contact met de server waarop de database draait.
+	$connection = mysqli_connect($servername, $username, $password, $databasename);
+	
+	if (!$connection)
 	{
-		// Definieer severname, usernaam, wachtwoord en databasenaam
-		$servername = 'localhost';
-		$username = 'root';
-		$password = '';
-		$databasename = 'blok1-am1a';
-		
-		// Maak contact met de server waarop de database draait.
-		$connection = mysqli_connect($servername, $username, $password, $databasename);
-		
-		//var_dump($connection);
-		
-		if (!$connection)
-		{
-			echo "Er is een fout opgetreden bij het contact maken met de database-server<br>";
-			header("refresh:5; url=mysqli.php");
-		}
-		else
-		{
+		echo "Er is een fout opgetreden bij het contact maken met de database-server<br>";
+		header("refresh:5; url=mysqli.php");
+	}
+	else
+	{	
+		if (isset($_POST['submit']))
+		{			
 			$sql = "INSERT INTO `user` (`id`,
 										`voornaam`,
 										`tussenvoegsel`,
@@ -44,26 +42,67 @@
 				echo "Uw ingevulde gegevens hebben ons bereikt. Dank voor het registreren";
 				header("refresh:5;url=mysqli.php");
 			}			
-		}		
-	}
-	else
-	{
+		}
+		else
+		{
 ?>
-	<!DOCTYPE html>
-	<html>
-		<head>
-			<title>MySqli</title>
-		</head>
-		<body>
-			<h3>Opslaan van gegevens in een database met mysqli</h3>
-				<form action='mysqli.php' method='post' >
-					voornaam:<input type='text' name='voornaam' /><br>			
-					tussenvoegsel:	<input type='text' name='tussenvoegsel' /><br>		
-					achternaam:	<input type='text' name='achternaam' /><br>		
-					<input type='submit' name='submit' value='sla op in database' />
-				</form>	
-		</body>
-	</html>
+			<!DOCTYPE html>
+			<html>
+				<head>
+					<title>MySqli</title>
+					<style>
+						table, th, td
+						{
+							border:2px solid grey;
+							border-collapse:collapse;
+							padding:0.5em 1em;
+						}			
+					</style>
+				</head>
+				<body>
+					<h3>Opslaan van gegevens in een database met mysqli</h3>
+						<form action='mysqli.php' method='post' >
+							voornaam:<input type='text' name='voornaam' /><br>			
+							tussenvoegsel:	<input type='text' name='tussenvoegsel' /><br>		
+							achternaam:	<input type='text' name='achternaam' /><br>		
+							<input type='submit' name='submit' value='sla op in database' />
+						</form>
+
+						<hr>				
+						
+						<!-- Opdracht: Maak een tabel voor het weergeven van de velden
+							 id, voornaam, tussenvoegsel, achternaam en zet er handmatig
+							 drie namen in -->				
+						<table>
+							<caption>Gebruikers</caption>
+							<tr>
+								<th>id</th>
+								<th>voornaam</th>
+								<th>tussenvoegsel</th>
+								<th>achternaam</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>Frans</td>
+								<td>van</td>
+								<td>Tielens</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Bert</td>
+								<td></td>
+								<td>Wagendorp</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Hans</td>
+								<td>van</td>
+								<td>Tichelen</td>
+							</tr>				
+						</table>
+				</body>
+			</html>
 <?php
+		}
 	}
 ?>
