@@ -86,43 +86,29 @@
 						<!-- Opdracht: Maak een tabel voor het weergeven van de velden
 							 id, voornaam, tussenvoegsel, achternaam en zet er handmatig
 							 drie namen in -->	
-						<?php
-						// We lezen het result uit en stoppen het in een array
-							while ($record = mysqli_fetch_array($result))
-							{
-								echo $record["id"]." ".			 
-									 $record["voornaam"]." ".
-									 $record["tussenvoegsel"]." ".
-									 $record["achternaam"]."<br>";
-							}
-						?>
-						<table>
-							<caption>Gebruikers</caption>
+						
+						
+						
+						<table>	
+							<caption>Gebruikers uit database</caption>
 							<tr>
 								<th>id</th>
 								<th>voornaam</th>
 								<th>tussenvoegsel</th>
-								<th>achternaam</th>
+								<th>achternaam</th>						
 							</tr>
-							<tr>
-								<td>1</td>
-								<td>Frans</td>
-								<td>van</td>
-								<td>Tielens</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>Bert</td>
-								<td></td>
-								<td>Wagendorp</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>Hans</td>
-								<td>van</td>
-								<td>Tichelen</td>
-							</tr>				
-						</table>
+						<?php
+							while ($record = mysqli_fetch_array($result))
+							{
+								echo "<tr>
+										 <td>".$record["id"]."</td>			 
+										 <td>".$record["voornaam"]."</td>
+										 <td>".$record["tussenvoegsel"]."</td>
+										 <td>".$record["achternaam"]."</td>
+									  </tr>";
+							}
+						?>
+						</table>					
 				</body>
 			</html>
 <?php
