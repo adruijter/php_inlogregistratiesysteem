@@ -95,18 +95,26 @@
 								<th>id</th>
 								<th>voornaam</th>
 								<th>tussenvoegsel</th>
-								<th>achternaam</th>						
+								<th>achternaam</th>
+								<th></th>
 							</tr>
 						<?php
-							while ($record = mysqli_fetch_array($result))
-							{
-								echo "<tr>
-										 <td>".$record["id"]."</td>			 
-										 <td>".$record["voornaam"]."</td>
-										 <td>".$record["tussenvoegsel"]."</td>
-										 <td>".$record["achternaam"]."</td>
-									  </tr>";
-							}
+						while ($record = mysqli_fetch_array($result))
+						{
+						  echo "<tr>
+								 <td>".$record["id"]."</td>			 
+								 <td>".$record["voornaam"]."</td>
+								 <td>".$record["tussenvoegsel"]."</td>
+								 <td>".$record["achternaam"]."</td>
+								 <td>
+								  <a href='update.php?
+											id=".$record['id']."&
+											voornaam=".$record['voornaam']."'>
+										<img src='./images/edit.png'  			alt='potlood'/>
+								  </a>
+								 </td>
+								</tr>";
+						}
 						?>
 						</table>					
 				</body>
