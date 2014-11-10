@@ -108,9 +108,12 @@
 								 <td>".$record["achternaam"]."</td>
 								 <td>
 								  <a href='update.php?
-											id=".$record['id']."&
-											voornaam=".$record['voornaam']."'>
-										<img src='./images/edit.png'  			alt='potlood'/>
+										id=".$record['id']."&
+										voornaam=".$record['voornaam']."&
+										tussenvoegsel=".$record['tussenvoegsel']."&
+										achternaam=".$record['achternaam']."'>
+										<img src='./images/edit.png' 
+											 alt='potlood'/>
 								  </a>
 								 </td>
 								</tr>";
