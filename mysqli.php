@@ -2,6 +2,14 @@
 	// Maak contact met de database
 	include('connect_db.php');
 	
+	function safe($text, $allowedTags='')
+	{
+		global $connection;
+		$safeText = mysqli_real_escape_string($connection, $text);
+		$safeText = strip_tags($safeText, $allowedTags);
+		return $safeText;
+	}
+	
 	if (!$connection)
 	{
 		echo "Er is een fout opgetreden bij het contact maken met de database-server<br>";
@@ -11,10 +19,9 @@
 	{	
 		if (isset($_POST['submit']))
 		{			
-		    $voornaam = mysqli_real_escape_string($connection, $_POST['voornaam']);
-			$tussenvoegsel = mysqli_real_escape_string
-									($connection, $_POST['tussenvoegsel']);
-			$achternaam = mysqli_real_escape_string($connection, $_POST['achternaam']);
+		    $voornaam = safe($_POST['voornaam']);
+			$tussenvoegsel = safe($_POST['tussenvoegsel']);
+			$achternaam = safe($_POST['achternaam']);
 			
 			$sql = "INSERT INTO `user` (`id`,
 										`voornaam`,
