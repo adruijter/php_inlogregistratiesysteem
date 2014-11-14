@@ -4,10 +4,10 @@
 		include('connect_db.php');
 		
 		$sql= "UPDATE	`user` 
-			   SET 		`voornaam`		=  '".$_POST['voornaam']."',
-						`tussenvoegsel`	= 'test',
-						`achternaam`	= 'test'
-			   WHERE	`id`			= 1;";
+			   SET 		`voornaam`		=	'".$_POST['voornaam']."',
+						`tussenvoegsel`	= 	'".$_POST['tussenvoegsel']."',
+						`achternaam`	=	'".$_POST['achternaam']."'
+			   WHERE	`id`			=	'".$_POST['id']."';";
 		
 		$result = mysqli_query($connection, $sql);
 		
@@ -15,12 +15,7 @@
 				U wordt doorgestuurd naar de vorige pagina"; 
 		
 		header("refresh:4;url=mysqli.php");
-		/* Maak contact met de mysqlserver en database
-		 * maak een updatequery
-		 * stuur de gebruiker weer terug naar de pagina mysqli.php met
-		 * header(refresh). Geef de gebruiker nog een melding dat het
-		 * updaten is gelukt
-		 */
+		
 	}
 	else
 	{
@@ -36,6 +31,9 @@
 	achternaam:	<input type="text" 
 					   name="achternaam" 
 					   value='<?php echo $_GET['achternaam']; ?>' /><br>
+				<input type="hidden"
+					   name="id"
+					   value="<?php echo $_GET['id']; ?>" /><br>
 				<input type="submit" name="submit" />
 </form>
 <?php

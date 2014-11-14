@@ -91,6 +91,7 @@
 								<th>tussenvoegsel</th>
 								<th>achternaam</th>
 								<th></th>
+								<th></th>
 							</tr>
 						<?php
 						while ($record = mysqli_fetch_array($result))
@@ -109,6 +110,9 @@
 										<img src='./images/edit.png' 
 											 alt='potlood'/>
 								  </a>
+								 </td>
+								 <td>
+								 
 								 </td>
 								</tr>";
 						}
