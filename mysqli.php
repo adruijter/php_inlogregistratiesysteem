@@ -11,15 +11,20 @@
 	{	
 		if (isset($_POST['submit']))
 		{			
+		    $voornaam = mysqli_real_escape_string($connection, $_POST['voornaam']);
+			$tussenvoegsel = mysqli_real_escape_string
+									($connection, $_POST['tussenvoegsel']);
+			$achternaam = mysqli_real_escape_string($connection, $_POST['achternaam']);
+			
 			$sql = "INSERT INTO `user` (`id`,
 										`voornaam`,
 										`tussenvoegsel`,
 										`achternaam`)
 							VALUES	   (NULL,
-										'".$_POST['voornaam']."',
-										'".$_POST['tussenvoegsel']."',
-										'".$_POST['achternaam']."');";
-			//echo $sql."<br>";
+										'".$voornaam."',
+										'".$tussenvoegsel."',
+										'".$achternaam."');";
+			//echo $sql."<br>"; exit();
 			
 			$send = mysqli_query($connection, $sql);
 			
@@ -112,7 +117,9 @@
 								  </a>
 								 </td>
 								 <td>
-								 
+								  <a href='./drop.php?id=".$record['id']."'>
+								    <img src='./images/drop.png' alt='kruisje' />
+								  </a>
 								 </td>
 								</tr>";
 						}
