@@ -19,6 +19,8 @@
 	$auto2->bouwjaar = "2018";
 	
 	
+	
+	
 	$text = "Het object auto1 heeft de volgende kenmerken:<br>";
 	$text .= "Merk: ".$auto1->merk."<br>";
 	$text .= "Type: ".$auto1->type."<br>";
