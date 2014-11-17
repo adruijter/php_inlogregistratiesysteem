@@ -42,7 +42,8 @@
 			$text .= "Deze auto heeft ".$this->aantalWielen." wielen<br>";
 			$text .= "Hij rijdt op: ".$this->brandstof."<br>";
 			$text .= "Het kenteken is: ".$this->kenteken."<br>";
-			$text .= "Deze".$this->merk." kwam voor het eerst in ".$this->bouwjaar." op de markt in Nederland<br>";	
+			$text .= "Deze".$this->merk." kwam voor het eerst in ".$this->bouwjaar." op de markt in Nederland<br>";
+			$text .= "++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>";
 			echo $text;
 		}
 	}
