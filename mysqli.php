@@ -19,24 +19,25 @@
 	{	
 		if (isset($_POST['submit']))
 		{			
-		    $voornaam = safe($_POST['voornaam']);
+		    $prep = $connection->prepare("INSERT INTO `user` (`id`,
+															  `voornaam`,
+															  `tussenvoegsel`,
+															  `achternaam`)
+												  VALUES	  (?, ?, ?, ?);");
+			$prep->bind_param("ssss", $id, $voornaam, $tussenvoegsel, $achternaam);	
+
+			$id = Null;
+			$voornaam = safe($_POST['voornaam']);
 			$tussenvoegsel = safe($_POST['tussenvoegsel']);
 			$achternaam = safe($_POST['achternaam']);
 			
-			$sql = "INSERT INTO `user` (`id`,
-										`voornaam`,
-										`tussenvoegsel`,
-										`achternaam`)
-							VALUES	   (NULL,
-										'".$voornaam."',
-										'".$tussenvoegsel."',
-										'".$achternaam."');";
+			$prep->execute();
 			//echo $sql."<br>"; exit();
 			
-			$send = mysqli_query($connection, $sql);
+			//$send = mysqli_query($connection, $sql);
 			
-			//var_dump($send);
-			
+			//var_dump($send);it 
+			/*
 			if (!$send)
 			{
 				echo "Uw ingevulde gegevens hebben ons niet bereikt. Probeer het<br>
@@ -47,7 +48,7 @@
 			{
 				echo "Uw ingevulde gegevens hebben ons bereikt. Dank voor het registreren";
 				header("refresh:5;url=mysqli.php");
-			}			
+			}	*/		
 		}
 		else
 		{
