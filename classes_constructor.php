@@ -6,8 +6,8 @@
 	$auto1 = new AutoClass("Mercedes", "SLK 500", 4, "benzine", "81-UY-PZ", 2018);
 	$auto2 = new AutoClass("Fiat", "500", 3, "diesel", "56-HK-TY", 2020);
 	
-	$autoArray = array();
 	// Stop in dit array AutoClass objecten
+	$autoArray = array();
 	$autoArray[] = new AutoClass("Mercedes", "SLK 500", 4, "benzine",
 									"81-UY-PZ", 2018);
 	$autoArray[] = new AutoClass("Fiat", "500", 3, "diesel", "56-HK-TY", 2020);
