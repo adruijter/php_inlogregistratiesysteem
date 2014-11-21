@@ -2,6 +2,7 @@
 	class AutoClass
 	{
 		//Fields
+		private static $aantalObjectenAutoClass = 0;
 		private $merk;
 		private $type;
 		private $aantalWielen;
@@ -17,6 +18,12 @@
 		public function getKenteken() 		{	return $this->kenteken;	}
 		public function getBouwjaar() 		{	return $this->bouwjaar;	}
 		
+		// Property voor een static field
+		public static function AantalObjectenAutoClass()
+		{
+			return self::$aantalObjectenAutoClass;
+		}
+		
 		
 		
 		// Constructor
@@ -27,6 +34,7 @@
 									$kenteken,
 									$bouwjaar)
 		{
+			self::$aantalObjectenAutoClass += 1;
 			$this->merk = $merk;
 			$this->type = $type;
 			$this->aantalWielen = $aantalWielen;
@@ -43,8 +51,14 @@
 			$text .= "Hij rijdt op: ".$this->brandstof."<br>";
 			$text .= "Het kenteken is: ".$this->kenteken."<br>";
 			$text .= "Deze".$this->merk." kwam voor het eerst in ".$this->bouwjaar." op de markt in Nederland<br>";
+			$text .= "Het aantal gemaakte objecten van deze class is: ".self::$aantalObjectenAutoClass."<br>";
 			$text .= "++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>";
 			echo $text;
+		}
+		
+		public static function ShowAantalGemaakteObjectenAutoClass()
+		{
+			echo "Het aantal gemaakte objecten van de AutoClass class bedraagt: ".self::$aantalObjectenAutoClass;
 		}
 	}
 ?>

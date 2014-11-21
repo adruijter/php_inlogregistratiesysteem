@@ -25,4 +25,7 @@
 	{
 		$auto->showInfoAuto();
 	}
+	
+	AutoClass::ShowAantalGemaakteObjectenAutoClass();
+	
 ?>
