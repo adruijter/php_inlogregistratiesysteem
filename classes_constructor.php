@@ -17,13 +17,19 @@
 <h3>Werken met de constructor</h3>
 <?php 
 	// Roep de method showInfoAuto() aan.
+	
+	
 	echo $auto1->showInfoAuto(); 
 	echo $auto2->showInfoAuto();
+	
+	$auto1 = null;
+	$auto2 = null;
 	
 	// Geef de info over de auto's in $autoArray weer door een foreach loop
 	foreach ($autoArray as $auto)
 	{
 		$auto->showInfoAuto();
+		
 	}
 	
 	AutoClass::ShowAantalGemaakteObjectenAutoClass();
