@@ -3,5 +3,13 @@
 	
 	$mercedes = new CarClass("Mercedes", "SLK 500S", "Diesel", "51-HB-ZP",
 								"2004", "auto", 4, "Peeeeeep");
-	$mercedes->CarInfo();
+								
+	$voertuig = new VoertuigClass("fiets", 3, "tring");
+	$voertuig->Info();
+	echo "<br>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>";
+	$mercedes->Info();
+	echo "<br>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>";
+	$test = $voertuig;
+	$test->Info();
+	
 ?>

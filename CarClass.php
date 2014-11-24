@@ -27,6 +27,7 @@
 		public function setKenteken($kenteken) { $this->kenteken = $kenteken; }
 		public function setBouwjaar($bouwjaar) { $this->bouwjaar = $bouwjaar; }
 		
+		
 		public function __construct($merk, $type, $brandstof, $kenteken,
 										$bouwjaar, $ikBenEen, $aantalWielen,
 											$geluidsWaarschuwing)
@@ -39,9 +40,14 @@
 			$this->bouwjaar = $bouwjaar;
 		}
 		
-		public function CarInfo()
+		public function Info()
 		{
-			echo "Dit object is een ".$this->ikBenEen." en van het merk ".$this->merk;		
+			$tekst = "";
+			$tekst .= "Dit object is een ".$this->ikBenEen." en van het merk ".$this->merk."<br>";
+			$tekst .= "Het rijdt op ".$this->aantalWielen." en heeft als hoorbaar geluid ".$this->geluidsWaarschuwing."<br>";
+			$tekst .= "Het kenteken is : ".$this->kenteken." en ik ben uit het jaar: ".$this->bouwjaar."<br>";
+			$tekst .= "Het object rijdt op de brandstof: ".$this->brandstof;
+			echo $tekst;
 		}
 	}
 ?>
