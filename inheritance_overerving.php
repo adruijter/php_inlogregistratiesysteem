@@ -1,6 +1,7 @@
 <?php
 	include_once("./CarClass.php");
 	include_once("./AmfibiewagenClass.php");
+	include_once("./iInfo.php");
 	
 	
 	$mercedes = new CarClass("Mercedes", "SLK 500S", "Diesel", "51-HB-ZP",
@@ -8,6 +9,8 @@
 	
 	$peppieEnKokkie = new AmfibiewagenClass("AmfibieWagen", 4, "Blub", "Groen", 2,
 												0.8, 1400, 500);
+												
+	
 												
 	$peppieEnKokkie->Info();
 	echo "<br>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>";

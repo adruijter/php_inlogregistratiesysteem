@@ -1,7 +1,8 @@
 <?php
 	require_once("./VoertuigClass.php");
+	require_once("./iInfo.php");
 
-	class AmfibiewagenClass extends VoertuigClass
+	class AmfibiewagenClass extends VoertuigClass implements iInfo
 	{
 		//Fields
 		private $kleur;
