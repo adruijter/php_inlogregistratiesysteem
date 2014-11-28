@@ -10,9 +10,14 @@
 	$peppieEnKokkie = new AmfibiewagenClass("AmfibieWagen", 4, "Blub", "Groen", 2,
 												0.8, 1400, 500);
 												
-	
+	if ($peppieEnKokkie instanceOf iInfo)
+	{
+		$peppieEnKokkie->info();
+	}
 												
-	$peppieEnKokkie->Info();
+	//$peppieEnKokkie->Info();
+	
+	
 	echo "<br>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>";
 								
 	$voertuig = new VoertuigClass("fiets", 3, "tring");
