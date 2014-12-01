@@ -11,13 +11,14 @@
 		public function __construct($filePath)
 		{
 			$this->filePath = $filePath;
-			openFile();
+			$this->openFile();
 		}
 		
 		//Methods
 		private function openFile()
 		{
-			$testFile = fopen("./".$this->text, "r");
+			$testFile = fopen("./".$this->filePath, "r");
+			$text = fread($testFile, filesize("./".$this->filePath));	
 			if (!$testFile)
 			{
 				return "Het openen van het bestand is niet gelukt";
@@ -30,7 +31,7 @@
 		
 		public function Info()
 		{
-			echo $text;
+			echo nl2br($this->text);
 		}
 	}
 ?>
