@@ -20,13 +20,5 @@ $file->Info();
 ?>
 <br>
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
-Maak een class die als argument van constructor de naam van het bestand
-meekrijgt. De class moet een method bevatten Info() die de volgende 
-gegevens op het scherm toont:
--aantal letter in het bestand
--aantal woorden in het bestand
--aantal zinnen in het bestand
--aantal punten in het bestand.
-
 De class moet ook een method hebben die als argument een tekst meekrijgt. De
 method geeft dan aan hoevaak de tekst is gevonden.
