@@ -16,6 +16,7 @@ echo "<br>======================================================================
 
 $file = new FileInfoClass("./testFile.txt");
 $file->Info();
+$file->countTextFragment("Ik", 1);
 
 ?>
 <br>

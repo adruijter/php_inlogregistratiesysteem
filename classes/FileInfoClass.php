@@ -40,5 +40,31 @@
 			$output .= "Het aantal punten in deze tekst: ".substr_count($this->text, ".")."<br>";
 			echo $output;
 		}
+		
+		/*
+			Pas deze method aan zodat hij op twee manieren kan zoeken, 0 = case-sensitive zoeken of 1 = case-insensitive zoeken.
+			
+			gebruik strtolower()
+		*/
+		public function countTextFragment($textFragment, $mode=0)
+		{
+			if ($mode == 0)
+			{
+				echo "We zoeken case-sensitive<br>";
+				$zoekResultaat = substr_count($this->text, $textFragment);
+					  	
+			}
+			else if ($mode == 1)
+			{
+				echo "We zoeken case-insensitive<br>";
+				$zoekResultaat = substr_count(strtolower($this->text), strtolower($textFragment));	
+			}
+			else
+			{
+				echo "U heeft een niet bekende modus gekozen";
+			}	
+			echo "De tekst: <i><b>'".$textFragment."'</b></i> komt ".$zoekResultaat." maal voor";
+		}
+		
 	}
 ?>
