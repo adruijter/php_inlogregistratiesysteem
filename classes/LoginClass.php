@@ -55,8 +55,14 @@
 										   'no',
 										   '".$date."')";
 			//echo $query;
-			$database->fire_query($query);	
-		
+			$database->fire_query($query);
+			
+			$last_id = mysqli_insert_id($database->getDb_connection());
+
+			UsersClass::insert_into_database();
+			
+			echo "Uw gegevens zijn verwerkt.";
+			header("refresh:3;url=register_form.php");		
 		}
 		
 	}

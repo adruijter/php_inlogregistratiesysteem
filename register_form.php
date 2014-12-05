@@ -3,12 +3,7 @@
 	{
 		require_once("./classes/LoginClass.php");
 		
-		$tekst = "Er is op de submitknop gedrukt<br>";
-		$tekst .= "De gegevens worden weggeschreven<br>";
-		$tekst .= "naar de database.<br>";
-		echo $tekst;
-			
-		LoginClass::insert_into_database($_POST);		
+		LoginClass::insert_into_database($_POST);
 	}
 	else
 	{
