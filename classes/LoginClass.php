@@ -1,5 +1,6 @@
 <?php
 	require_once("MySqlDatabaseClass.php");
+	require_once("UsersClass.php");
 
 	class LoginClass
 	{
@@ -59,7 +60,7 @@
 			
 			$last_id = mysqli_insert_id($database->getDb_connection());
 
-			UsersClass::insert_into_database();
+			UsersClass::insert_into_database($last_id);
 			
 			echo "Uw gegevens zijn verwerkt.";
 			header("refresh:3;url=register_form.php");		

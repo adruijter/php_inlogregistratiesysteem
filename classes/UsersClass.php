@@ -1,5 +1,5 @@
 <?php
-	require_once('./MySqlDatabaseClass.php');
+	require_once('MySqlDatabaseClass.php');
 	
 	class UsersClass
 	{
@@ -26,15 +26,12 @@
 		public function __construct() {}
 		
 		//Methods	
-		public function insert_into_users()
+		public static function insert_into_database($id)
 		{
+			echo $id; exit();
 			//Hier moet code komen voor het contact maken met de server
+			
 		}
 		
-		public function delete_all_from_users()
-		{
-			//Hier moet code komen voor het contact maken met de server
-		}
-
-	}
+}
 ?>
