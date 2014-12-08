@@ -60,11 +60,33 @@
 			
 			$last_id = mysqli_insert_id($database->getDb_connection());
 
-			UsersClass::insert_into_database($last_id);
+			UsersClass::insert_into_database($last_id, $post);
 			
 			echo "Uw gegevens zijn verwerkt.";
 			header("refresh:3;url=register_form.php");		
 		}
 		
+		public static function check_if_email_exists($email)
+		{
+			global $database;
+			
+			$query = "SELECT `email`
+					  FROM	 `login`
+					  WHERE	 `email` = '".$email."'";
+					  
+			$result = $database->fire_query($query);
+			
+			//ternary operator
+			return (mysqli_num_rows(result) > 0) ? true : false;
+			
+			if ( mysqli_num_rows($result) > 0)
+			{
+				return  true;
+			}
+			else
+			{
+				return false;
+			}			
+		}		
 	}
 ?>

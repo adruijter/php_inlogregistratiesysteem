@@ -26,11 +26,19 @@
 		public function __construct() {}
 		
 		//Methods	
-		public static function insert_into_database($id)
+		public static function insert_into_database($id, $post)
 		{
-			echo $id; exit();
-			//Hier moet code komen voor het contact maken met de server
+			global $database;
+			$query = "INSERT INTO `users` (`id`,
+										   `firstname`,
+										   `infix`,
+										   `lastname`)
+					  VALUES			  ('".$id."',
+										   '".$post['firstname']."',
+										   '".$post['infix']."',
+										   '".$post['lastname']."')";
 			
+			$database->fire_query($query);
 		}
 		
 }
