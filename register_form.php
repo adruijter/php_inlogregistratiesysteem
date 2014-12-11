@@ -14,7 +14,7 @@
 		else
 		{
 			LoginClass::insert_into_database($_POST);
-		}		
+		}
 	}
 	else
 	{
