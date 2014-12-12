@@ -61,7 +61,9 @@
 			$last_id = mysqli_insert_id($database->getDb_connection());
 
 			UsersClass::insert_into_database($last_id, $post);
-			
+						
+			self::send_email($last_id, $post);
+						
 			echo "Uw gegevens zijn verwerkt.";
 			header("refresh:3;url=register_form.php");		
 		}
@@ -77,8 +79,9 @@
 			$result = $database->fire_query($query);
 			
 			//ternary operator
-			return (mysqli_num_rows(result) > 0) ? true : false;
+			return (mysqli_num_rows($result) > 0) ? true : false;
 			
+			/*Onbereikbare code geworden
 			if ( mysqli_num_rows($result) > 0)
 			{
 				return  true;
@@ -86,7 +89,27 @@
 			else
 			{
 				return false;
-			}			
+			}
+			*/			
+		}
+		
+		private static function send_email($id, $post)
+		{
+			$to = $post['email'];
+			$subject = "Activatiemail SpheroMeter B.V.";
+			$message = "Geachte heer/mevrouw ".$post['firstname']." ".
+											   $post['infix']." ".
+											   $post['lastname']."\r\n";			
+			$message .= "Hartelijk dank voor het registreren op SpheroMeter B.V."."\r\n";
+			$message .= "U kunt de registratie voltooien door op de onderstaande"."\r\n";
+			$message .= "activatielink te klikken:"."\r\n";
+			$message .= "link"."\r\n";
+			$message .= "U kunt dan vervolgens een nieuw wachtwoord instellen."."\r\n";
+			$message .= "Met vriendelijke groet,"."\r\n";
+			$message .= "Arjan de Ruijter"."\r\n";
+			$message .= "General CEO SpheroMeter B.V."."\r\n";
+			
+			mail( $to, $subject, $message); 
 		}		
 	}
 ?>
