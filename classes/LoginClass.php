@@ -79,37 +79,54 @@
 			$result = $database->fire_query($query);
 			
 			//ternary operator
-			return (mysqli_num_rows($result) > 0) ? true : false;
-			
-			/*Onbereikbare code geworden
-			if ( mysqli_num_rows($result) > 0)
-			{
-				return  true;
-			}
-			else
-			{
-				return false;
-			}
-			*/			
+			return (mysqli_num_rows($result) > 0) ? true : false;	
 		}
 		
 		private static function send_email($id, $post)
 		{
 			$to = $post['email'];
-			$subject = "Activatiemail SpheroMeter B.V.";
-			$message = "Geachte heer/mevrouw ".$post['firstname']." ".
+			$subject = "Activatiemail Bakker Bart B.V.";
+			$message = "Geachte heer/mevrouw <b>".$post['firstname']." ".
 											   $post['infix']." ".
-											   $post['lastname']."\r\n";			
-			$message .= "Hartelijk dank voor het registreren op SpheroMeter B.V."."\r\n";
-			$message .= "U kunt de registratie voltooien door op de onderstaande"."\r\n";
-			$message .= "activatielink te klikken:"."\r\n";
-			$message .= "link"."\r\n";
-			$message .= "U kunt dan vervolgens een nieuw wachtwoord instellen."."\r\n";
-			$message .= "Met vriendelijke groet,"."\r\n";
-			$message .= "Arjan de Ruijter"."\r\n";
-			$message .= "General CEO SpheroMeter B.V."."\r\n";
+											   $post['lastname']."</b><br>";
+												
+			$message .= '<style>a { color:red;}</style>';
+			$message .= "Hartelijk dank voor het registreren op Bakker Bart B.V."."<br>";
+			$message .= "Uw registratienummer is: ".$id."<br>";
+			$message .= "U kunt de registratie voltooien door op de onderstaande"."<br>";
+			$message .= "activatielink te klikken:"."<br>";
 			
-			mail( $to, $subject, $message); 
-		}		
+			$message .= "klik <a href='http://localhost/2014-2015/inlogregistratiesysteem/activate.php?id=".$id."'>hier</a> om uw account te activeren"."<br>";
+			
+			$message .= "U kunt dan vervolgens een nieuw wachtwoord instellen."."<br>";
+			$message .= "Met vriendelijke groet,"."<br>";
+			$message .= "Arjan de Ruijter"."<br>";
+			$message .= "General CEO Bakker Bart B.V."."<br>";
+		
+			$headers = 'From: no-reply@bakkerbart.nl'."\r\n";
+			$headers .= 'Reply-To: webmaster@bakkerbart.nl'."\r\n";
+			$headers .= 'Cc: admin@bakkerbart.nl'."\r\n";
+			$headers .= 'Bcc: accountant@bakkerbart.nl'."\r\n";
+			//$headers .= "MIME-version: 1.0"."\r\n";
+			//$headers .= "Content-type: text/plain; charset=iso-8859-1"."\r\n";
+			$headers .= "Content-type: text/html; charset=iso-8859-1"."\r\n";		
+			$headers .= 'X-Mailer: PHP/' . phpversion();
+
+			
+			
+			mail( $to, $subject, $message, $headers); 
+		}
+
+		public static function activate_account_by_id($id)
+		{
+			global $database;
+			$query = "UPDATE `login`
+					  SET `activated` = 'yes'
+					  WHERE `id` = '".$id."'";
+					  
+			$database->fire_query($query);
+			echo "Uw account is geactiveerd. Verander uw wachtwoord.";
+			header("refresh:4;url=change_password.php");
+		}
 	}
 ?>
