@@ -43,6 +43,8 @@
 			
 			$date = date('Y-m-d H:i:s');
 			
+			$password = MD5($post['email'].date('Y-m-d H:i:s'));
+			
 			$query = "INSERT INTO `login` (`id`,
 										   `email`,
 										   `password`,
@@ -51,7 +53,7 @@
 										   `activationdate`)
 					  VALUES			  (NULL,
 										   '".$post['email']."',
-										   '".MD5("geheim")."',
+										   '".$password."',
 										   'customer',
 										   'no',
 										   '".$date."')";
@@ -125,8 +127,18 @@
 					  WHERE `id` = '".$id."'";
 					  
 			$database->fire_query($query);
-			echo "Uw account is geactiveerd. Verander uw wachtwoord.";
-			header("refresh:4;url=change_password.php");
+			echo "<h3>Uw account is geactiveerd. Verander uw wachtwoord.</h3><br>";
+		}
+		
+		public static function update_password($id, $password)
+		{
+			global $database;
+			$query = "UPDATE `login` 
+					  SET	 `password` =	'".MD5($password)."'
+					  WHERE	 `id`		=	'".$id."'";
+			$database->fire_query($query);
+			echo "Uw wachtwoord is succesvol gewijzigd.";
+			header("refresh:4;url=activate.php?id=".$id);		
 		}
 	}
 ?>

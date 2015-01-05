@@ -25,7 +25,7 @@
 		<title>register</title>
 	</head>
 	<body>
-	<h3>RegistratieVerfromulier</h3>
+	<h3>Registratieformulier</h3>
 		<form action='./register_form.php' method='post'>
 			voornaam: <input type='text' name='firstname' /><br>
 			tussenvoegsel: <input type='text' name='infix' /><br>
