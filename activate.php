@@ -1,5 +1,8 @@
 <?php
 	require_once("./classes/LoginClass.php");
+	if (LoginClass::check_if_email_password_exists($_GET['email'], $_GET['password']))
+	{
+	
 	if (isset($_POST['submit']))
 	{
 		// 1. Check of de twee ingevoerde passwords correct zijn.
@@ -29,5 +32,10 @@
 	<input type='submit' name='submit' />
 </form>
 <?php
+	}
+	
+	else
+	{
+		
 	}
 ?>

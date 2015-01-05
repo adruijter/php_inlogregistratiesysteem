@@ -64,7 +64,7 @@
 
 			UsersClass::insert_into_database($last_id, $post);
 						
-			self::send_email($last_id, $post);
+			self::send_email($last_id, $post, $password);
 						
 			echo "Uw gegevens zijn verwerkt.";
 			header("refresh:3;url=register_form.php");		
@@ -84,8 +84,24 @@
 			return (mysqli_num_rows($result) > 0) ? true : false;	
 		}
 		
-		private static function send_email($id, $post)
+		public static function check_if_email_password_exists($email, $password)
 		{
+			global $database;
+			
+			$query = "SELECT `email`, `password`
+					  FROM	 `login`
+					  WHERE	 `email` = '".$email."'
+					  AND	 `password` = '".$password."'";
+					  
+			$result = $database->fire_query($query);
+			
+			//ternary operator
+			return (mysqli_num_rows($result) > 0) ? true : false;	
+		}
+		
+		private static function send_email($id, $post, $password)
+		{
+			echo $password; exit();
 			$to = $post['email'];
 			$subject = "Activatiemail Bakker Bart B.V.";
 			$message = "Geachte heer/mevrouw <b>".$post['firstname']." ".
@@ -98,7 +114,7 @@
 			$message .= "U kunt de registratie voltooien door op de onderstaande"."<br>";
 			$message .= "activatielink te klikken:"."<br>";
 			
-			$message .= "klik <a href='http://localhost/2014-2015/inlogregistratiesysteem/activate.php?id=".$id."'>hier</a> om uw account te activeren"."<br>";
+			$message .= "klik <a href='http://localhost/2014-2015/inlogregistratiesysteem/activate.php?id=".$id."&email=".$post['email']."&password=".$password."'>hier</a> om uw account te activeren"."<br>";
 			
 			$message .= "U kunt dan vervolgens een nieuw wachtwoord instellen."."<br>";
 			$message .= "Met vriendelijke groet,"."<br>";
