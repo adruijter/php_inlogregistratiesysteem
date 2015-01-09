@@ -101,7 +101,6 @@
 		
 		private static function send_email($id, $post, $password)
 		{
-			echo $password; exit();
 			$to = $post['email'];
 			$subject = "Activatiemail Bakker Bart B.V.";
 			$message = "Geachte heer/mevrouw <b>".$post['firstname']." ".
@@ -154,7 +153,7 @@
 					  WHERE	 `id`		=	'".$id."'";
 			$database->fire_query($query);
 			echo "Uw wachtwoord is succesvol gewijzigd.";
-			header("refresh:4;url=activate.php?id=".$id);		
+			header("refresh:4;url=register_form.php");		
 		}
 	}
 ?>
