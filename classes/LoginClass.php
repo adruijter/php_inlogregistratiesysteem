@@ -88,17 +88,33 @@
 		{
 			global $database;
 			
-			$query = "SELECT `email`, `password`
+			$query = "SELECT `email`, `password`, `activated`
 					  FROM	 `login`
 					  WHERE	 `email` = '".$email."'
 					  AND	 `password` = '".$password."'";
 					  
 			$result = $database->fire_query($query);
 			
-			//ternary operator
-			return (mysqli_num_rows($result) > 0) ? true : false;	
+			$record = mysqli_fetch_array($result);
+			
+			return (mysqli_num_rows($result) > 0 && $record['activated'] == 'no') ? true : false;	
 		}
 		
+		public static function check_if_activated($email, $password)
+		{
+			global $database;
+			
+			$query = "SELECT `activated`
+					  FROM	 `login`
+					  WHERE	 `email` = '".$email."'
+					  AND	 `password` = '".$password."'";
+					  
+			$result = $database->fire_query($query);			
+			$record = mysqli_fetch_array($result);
+			
+			return ( $record['activated'] == 'no') ? true : false;
+		}
+				
 		private static function send_email($id, $post, $password)
 		{
 			$to = $post['email'];
@@ -142,7 +158,7 @@
 					  WHERE `id` = '".$id."'";
 					  
 			$database->fire_query($query);
-			echo "<h3>Uw account is geactiveerd. Verander uw wachtwoord.</h3><br>";
+			
 		}
 		
 		public static function update_password($id, $password)
