@@ -8,7 +8,7 @@
 		{
 			$action = "activate.php?id=".$_GET['id']."&email=".$_GET['email']."&password=".$_GET['password'];	
 			
-			if (LoginClass::check_if_email_password_exists($_GET['email'], $_GET['password']))
+			if (LoginClass::check_if_email_password_exists($_GET['email'], $_GET['password'], 'no'))
 			{	
 				if (isset($_POST['submit']))
 				{

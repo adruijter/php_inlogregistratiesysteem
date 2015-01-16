@@ -34,6 +34,48 @@
 		//Methods
 		/* Hier komen de methods die de informatie in/uit de database stoppen/halen
 		*/
+		public static function find_by_sql($query)
+		{
+			// Maak het $database-object vindbaar binnen deze method
+			global $database;
+			
+			// Vuur de query af op de database
+			$result = $database->fire_query($query);
+			
+			// Maak een array aan waarin je LoginClass-objecten instopt
+			$object_array = array();
+			
+			// Doorloop alle gevonden records uit de database
+			while ( $row  = mysqli_fetch_array($result))
+			{
+				// Een object aan van de LoginClass (De class waarin we ons bevinden)
+				$object = new LoginClass();
+				
+				// Stop de gevonden recordwaarden uit de database in de fields van een LoginClass-object
+				$object->id				= $row['id'];
+				$object->email			= $row['email'];
+				$object->password		= $row['password'];
+				$object->userrole		= $row['userrole'];
+				$object->activated		= $row['activated'];
+				$object->activationdate = $row['activationdate'];
+			
+				$object_array[] = $object;
+			}
+			return $object_array;
+		}
+		
+		public static function find_login_by_email_password($email, $password)
+		{
+			$query = "SELECT *
+					  FROM `login`
+					  WHERE `email` 	= '".$email."'
+					  AND	`password`	= '".$password."'";
+					  
+			$loginClassObjectArray = self::find_by_sql($query);
+			$loginClassObject = array_shift($loginClassObjectArray);
+			return $loginClassObject;
+		}
+		
 		
 		public static function insert_into_database($post)
 		{
@@ -84,7 +126,8 @@
 			return (mysqli_num_rows($result) > 0) ? true : false;	
 		}
 		
-		public static function check_if_email_password_exists($email, $password)
+				
+		public static function check_if_email_password_exists($email, $password, $activated)
 		{
 			global $database;
 			
@@ -97,7 +140,7 @@
 			
 			$record = mysqli_fetch_array($result);
 			
-			return (mysqli_num_rows($result) > 0 && $record['activated'] == 'no') ? true : false;	
+			return (mysqli_num_rows($result) > 0 && $record['activated'] == $activated) ? true : false;	
 		}
 		
 		public static function check_if_activated($email, $password)
