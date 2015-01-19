@@ -1,5 +1,5 @@
 <?php
-	$userrole = "developer";
+	$userrole = array("developer", "root", "administrator");
 	require_once("./security.php");
 ?>
 Developerhomepage

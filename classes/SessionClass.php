@@ -20,6 +20,8 @@
 			$this->id = $_SESSION['id'] = $loginObject->getId();
 			$this->email = $_SESSION['email'] = $loginObject->getEmail();
 			$this->userrole = $_SESSION['userrole'] = $loginObject->getUserrole();
+			
+			$result = UsersClass::find_info_by_id($_SESSION['id']);
 		}
 
 		public function logout()

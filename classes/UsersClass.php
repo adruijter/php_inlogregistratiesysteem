@@ -25,7 +25,46 @@
 		//Constuctor
 		public function __construct() {}
 		
-		//Methods	
+		//Methods
+		public static function find_by_sql($query)
+		{
+			// Maak het $database-object vindbaar binnen deze method
+			global $database;
+			
+			// Vuur de query af op de database
+			$result = $database->fire_query($query);
+			
+			// Maak een array aan waarin je LoginClass-objecten instopt
+			$object_array = array();
+			
+			// Doorloop alle gevonden records uit de database
+			while ( $row  = mysqli_fetch_array($result))
+			{
+				// Een object aan van de LoginClass (De class waarin we ons bevinden)
+				$object = new UsersClass();
+				
+				// Stop de gevonden recordwaarden uit de database in de fields van een LoginClass-object
+				$object->id				= $row['id'];
+				$object->firstname		= $row['firstname'];
+				$object->infix			= $row['infix'];
+				$object->lastname		= $row['lastname'];
+			
+				$object_array[] = $object;
+			}
+			return $object_array;
+		}
+		
+		public static function find_info_by_id($id)
+		{
+			$query = "SELECT 	*
+					  FROM 		`users`
+					  WHERE		`id`	=	".$id;
+			$object_array = self::find_by_sql($query);
+			$usersclassObject = array_shift($object_array);
+			var_dump($usersclassObject); exit();
+			return $usersclassObject;			
+		}
+		
 		public static function insert_into_database($id, $post)
 		{
 			global $database;
@@ -40,6 +79,8 @@
 			
 			$database->fire_query($query);
 		}
+		
+		
 		
 }
 ?>
