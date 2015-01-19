@@ -1,4 +1,5 @@
 <?php
+	$userrole = "root";
 	require_once("./security.php");
 ?>
 Roothomepage

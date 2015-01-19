@@ -1,4 +1,5 @@
 <?php
+	$userrole = "photographer";
 	require_once("./security.php");
 ?>
 Photographerhomepage

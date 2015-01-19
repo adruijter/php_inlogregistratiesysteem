@@ -1,4 +1,5 @@
 <?php
+	$userrole = array("customer", "root");
 	require_once("./security.php");
 ?>
 Customerhomepage

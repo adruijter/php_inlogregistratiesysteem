@@ -1,4 +1,5 @@
 <?php
+	$userrole = "administrator";
 	require_once("./security.php");
 ?>
 Administratorhomepage
