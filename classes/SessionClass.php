@@ -20,7 +20,19 @@
 			$this->id = $_SESSION['id'] = $loginObject->getId();
 			$this->email = $_SESSION['email'] = $loginObject->getEmail();
 			$this->userrole = $_SESSION['userrole'] = $loginObject->getUserrole();
-		}	
+		}
+
+		public function logout()
+		{
+			session_unset('id');
+			session_unset('email');
+			session_unset('userrole');		
+			session_destroy();
+			
+			unset($this->id);
+			unset($this->email);
+			unset($this->userrole);
+		}
 	}
 	
 	$session = new SessionClass();

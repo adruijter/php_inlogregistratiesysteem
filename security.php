@@ -1,0 +1,15 @@
+<?php
+	session_start();	
+	
+	if ( !isset( $_SESSION['id']))
+	{
+		echo "U bent niet ingelogd en daarom niet bevoegd om deze pagina te bekijken. U wordt teruggestuurd naar de loginpagina.";
+		header("refresh:5;url=login_form.php");
+		exit();
+	}
+	else
+	{
+	
+	
+	}
+	?>
