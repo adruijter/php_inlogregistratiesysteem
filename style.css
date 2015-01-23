@@ -1,0 +1,35 @@
+body
+{
+	border:1px solid black;
+	margin:0 auto;
+	width:600px;
+}
+
+header							
+{									
+	border:1px solid blue;			
+	padding:20px 20px;				
+	margin:50px auto;			
+}
+
+aside							
+{									
+	border:1px solid blue;			
+	padding:20px 20px;				
+	margin:50px auto;		
+}
+
+section							
+{									
+	border:1px solid blue;			
+	padding:20px 20px;				
+	margin:50px auto;		
+}
+
+footer							
+{									
+	border:0px solid blue;			
+	padding:20px 20px;				
+	margin:50px auto;			
+}	
+			
