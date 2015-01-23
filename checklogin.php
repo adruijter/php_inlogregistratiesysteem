@@ -2,6 +2,7 @@
 	require_once("classes/LoginClass.php");
 	require_once("classes/SessionClass.php");
 
+	
 	if ( !empty($_POST['email']) && !empty($_POST['password']))
 	{
 		// Als email/password combi bestaat en geactiveerd....

@@ -21,7 +21,10 @@
 			$this->email = $_SESSION['email'] = $loginObject->getEmail();
 			$this->userrole = $_SESSION['userrole'] = $loginObject->getUserrole();
 			
-			$result = UsersClass::find_info_by_id($_SESSION['id']);
+			$usersObject = UsersClass::find_info_by_id($_SESSION['id']);
+			$_SESSION['username'] = $usersObject->getFirstName()." ".
+									$usersObject->getInfix()." ".
+									$usersObject->getLastname();
 		}
 
 		public function logout()
