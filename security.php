@@ -14,6 +14,7 @@
 	}
 	else
 	{
-		echo "Welkom ".$_SESSION['username'];
+		echo "Welkom ".$_SESSION['username']." | ".
+					   $_SESSION['userrole']."<br>";
 	}
 	?>
