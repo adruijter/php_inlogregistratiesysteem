@@ -2,7 +2,7 @@ body
 {
 	border:1px solid black;
 	margin:0 auto;
-	width:600px;
+	width:900px;
 	font-family:Verdana;
 }
 
@@ -21,21 +21,27 @@ aside
 {									
 	border:1px solid blue;			
 	padding:0px 20px;				
-	margin-top:20px;		
+	margin-top:20px;
+	float:left;
+	width: 130px;
 }
 
 section							
 {									
 	border:1px solid blue;			
 	padding:20px 20px;				
-	margin:20px auto;		
+	margin:20px auto;
+	float: right;
+	width: 680px;
+	min-height: 400px;
 }
 
 footer							
 {									
 	border:1px solid blue;			
 	padding:20px 20px;				
-	margin-top:20px;			
+	margin-top:20px;
+	clear: both;
 }
 
 aside ul
@@ -50,6 +56,5 @@ aside ul li
 {
 	border:1px solid red;
 	width:100px;
-	display:inline;
 }
 			

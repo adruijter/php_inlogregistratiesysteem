@@ -3,5 +3,5 @@
 	
 	$session->logout();
 	
-	header("location:index.php?content=login_form");
+	header("location:index.php");
 ?>
