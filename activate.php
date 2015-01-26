@@ -6,7 +6,7 @@
 		
 		if (LoginClass::check_if_activated($_GET['email'],$_GET['password']))
 		{
-			$action = "activate.php?id=".$_GET['id']."&email=".$_GET['email']."&password=".$_GET['password'];	
+			$action = "index.php?content=activate&id=".$_GET['id']."&email=".$_GET['email']."&password=".$_GET['password'];	
 			
 			if (LoginClass::check_if_email_password_exists($_GET['email'], $_GET['password'], 'no'))
 			{	
@@ -18,7 +18,6 @@
 						// 2. Activeer het account en update het oude password naar het nieuwe password.
 						LoginClass::activate_account_by_id($_GET['id']);
 						LoginClass::update_password($_POST['id'], $_POST['password_1']);
-						header("refresh:4;url=register_form.php");
 					}
 					else
 					{
@@ -43,18 +42,18 @@
 			else
 			{
 				echo "U heeft geen rechten op deze pagina. Uw email/password combi is niet correct of uw account is al geactiveerd. U wordt doorgestuurd naar de registratiepagina<br>";
-				header("refresh:4;url=register_form.php");
+				header("refresh:4;url=index.php?content=register_form");
 			}
 		}
 		else
 		{
 			echo "Uw account is all geactiveerd of uw email/password combi is niet correct u heeft daarom geen rechten op deze pagina. U wordt doorgestuurd naar de registratiepagina<br>";
-			header("refresh:4;url=register_form.php");
+			header("refresh:4;url=index.php?content=register_form");
 		}
 	}
 	else
 	{
 		echo "Uw url is niet correct en daarom heeft u geen rechten op deze pagina. U wordt doorgestuurd naar de registratiepagina<br>";
-		header("refresh:4;url=register_form.php");
+		header("refresh:4;url=index.php?content=register_form");
 	}
 ?>

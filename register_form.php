@@ -9,7 +9,7 @@
 			echo "Het door u gebruikte emailadres is al in gebruik.<br>
 				  Gebruik een ander emailadres. U wordt doorgestuurd naar<br>
 				  het registratieformulier";
-			header("refresh:5;url=register_form.php");
+			header("refresh:5;url=index.php?content=register_form");
 		}
 		else
 		{
@@ -26,7 +26,7 @@
 	</head>
 	<body>
 	<h3>Registratieformulier</h3>
-		<form action='./register_form.php' method='post'>
+		<form action='index.php?content=register_form' method='post'>
 			voornaam: <input type='text' name='firstname' /><br>
 			tussenvoegsel: <input type='text' name='infix' /><br>
 			achternaam: <input type='text' name='lastname' /><br>

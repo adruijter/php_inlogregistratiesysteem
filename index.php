@@ -6,28 +6,18 @@
 	</head>
 	<body>
 		<header>
-			Dit is de kop van de webapplicatie
+			<?php include("header.php"); ?>
 		</header>
 		<aside>
 			<ul>
 				<li><a href='index.php?content=algemeneHomepage'>home</a></li>
-				<li><a href=''>registreren</a></li>
-				<li><a href=''>inloggen</a></li>			
+				<li><a href='index.php?content=register_form'>registreren</a></li>
+				<li><a href='index.php?content=Login_form'>inloggen</a></li>
+				<li><a href='index.php?content=logout'>uitloggen</a></li>
 			</ul>
 		</aside>
 		<section>
-			<?php
-				if ()
-				{
-				include($_GET["content"].".php");
-				}
-				else
-				{
-			?>
-			Hier komt de inhoud van de gekozen pagina. Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen paginaHier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina	
-				<?php
-				}
-				?>
+			<?php include("redirect.php"); ?>
 		</section>		
 		<footer>
 			Dit is de footer van de webapplicatie

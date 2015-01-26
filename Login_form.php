@@ -1,5 +1,5 @@
 <table>
-	<form action='checklogin.php' method='post'>
+	<form action='index.php?content=checklogin' method='post'>
 		<tr>
 			<td>emailadres</td>
 		</tr>

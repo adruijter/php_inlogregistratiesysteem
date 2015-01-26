@@ -109,7 +109,7 @@
 			self::send_email($last_id, $post, $password);
 						
 			echo "Uw gegevens zijn verwerkt.";
-			header("refresh:3;url=register_form.php");		
+			header("refresh:3;url=index.php?content=login_form");		
 		}
 		
 		public static function check_if_email_exists($email)
@@ -172,7 +172,7 @@
 			$message .= "U kunt de registratie voltooien door op de onderstaande"."<br>";
 			$message .= "activatielink te klikken:"."<br>";
 			
-			$message .= "klik <a href='http://localhost/2014-2015/inlogregistratiesysteem/activate.php?id=".$id."&email=".$post['email']."&password=".$password."'>hier</a> om uw account te activeren"."<br>";
+			$message .= "klik <a href='http://localhost/2014-2015/inlogregistratiesysteem/index.php?content=activate&id=".$id."&email=".$post['email']."&password=".$password."'>hier</a> om uw account te activeren"."<br>";
 			
 			$message .= "U kunt dan vervolgens een nieuw wachtwoord instellen."."<br>";
 			$message .= "Met vriendelijke groet,"."<br>";
@@ -212,7 +212,7 @@
 					  WHERE	 `id`		=	'".$id."'";
 			$database->fire_query($query);
 			echo "Uw wachtwoord is succesvol gewijzigd.";
-			header("refresh:4;url=register_form.php");		
+			header("refresh:4;url=index.php?content=login_form");		
 		}
 	}
 ?>

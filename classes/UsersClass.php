@@ -61,7 +61,7 @@
 					  WHERE		`id`	=	".$id;
 			$object_array = self::find_by_sql($query);
 			$usersclassObject = array_shift($object_array);
-			var_dump($usersclassObject); exit();
+			//var_dump($usersclassObject); exit();
 			return $usersclassObject;			
 		}
 		

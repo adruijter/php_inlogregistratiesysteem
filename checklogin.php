@@ -10,40 +10,39 @@
 													   MD5($_POST['password']),
 													   'yes'))
 		{
-			echo "Accountgegevens opvragen en in sessievariabelen opslaan";
 			$session->login(LoginClass::find_login_by_email_password($_POST['email'], 														  MD5($_POST['password'])));
 			
 			switch ($_SESSION['userrole'])
 			{
 				case 'customer':
-					header("location:customerHomepage.php");
+					header("location:index.php?content=customerHomepage");
 					break;
 				case 'administrator':
-					header("location:administratorHomepage.php");
+					header("location:index.php?content=administratorHomepage");
 					break;
 				case 'root':
-					header("location:rootHomepage.php");
+					header("location:index.php?content=rootHomepage");
 					break;
 				case 'photographer':
-					header("location:photographerHomepage.php");
+					header("location:index.php?content=photographerHomepage");
 					break;
 				case 'developer':
-					header("location:developerHomepage.php");
+					header("location:index.php?content=developerHomepage");
 					break;
 				default :
-					header("location:login_form.php");			
+					header("location:index.php?content=login_form");			
 			}
 		}
 		else
 		{
-			echo "Melden aan gebruiker dat email/password combi niet bestaat of dat 
-				  het account niet is geactiveerd.";
+			echo "Uw email/password combi bestaat niet of uw account is niet geactiveerd.";
+				  header("refresh:4;url=index.php?content=login_form");
 		}	
 	}
 	else
 	{
 		echo "U heeft een van beide velden niet ingevuld, u wordt doorgestuurd<br>
 			  naar de inlogpagina.";
-		header("refresh:5;url=login_form.php");
+		header("refresh:5;url=index.php?content=login_form");
 	}
 ?>
