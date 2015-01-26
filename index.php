@@ -9,10 +9,11 @@
 			Dit is de kop van de webapplicatie
 		</header>
 		<aside>
-			Hier komen de hyperlinks. Hier komen de hyperlinks. Hier komen de hyperlinks.Hier komen de hyperlinks. Hier komen de hyperlinks. Hier komen de hyperlinks. Hier komen de hyperlinks.Hier komen de hyperlinks.
-			Hier komen de hyperlinks. Hier komen de hyperlinks. Hier komen de hyperlinks.Hier komen de hyperlinks.Hier komen de hyperlinks. Hier komen de hyperlinks. Hier komen de hyperlinks.Hier komen de hyperlinks.
-			Hier komen de hyperlinks. Hier komen de hyperlinks. Hier komen de hyperlinks.Hier komen de hyperlinks. Hier komen de hyperlinks. Hier komen de hyperlinks. Hier komen de hyperlinks.Hier komen de hyperlinks.
-			Hier komen de hyperlinks. Hier komen de hyperlinks. Hier komen de hyperlinks.Hier komen de hyperlinks. Hier komen de hyperlinks. Hier komen de hyperlinks. Hier komen de hyperlinks.Hier komen de hyperlinks.
+			<ul>
+				<li><a href=''>home</a></li>
+				<li><a href=''>registreren</a></li>
+				<li><a href=''>inloggen</a></li>			
+			</ul>
 		</aside>
 		<section>
 			Hier komt de inhoud van de gekozen pagina. Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen paginaHier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina.Hier komt de inhoud van de gekozen pagina		

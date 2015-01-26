@@ -3,33 +3,53 @@ body
 	border:1px solid black;
 	margin:0 auto;
 	width:600px;
+	font-family:Verdana;
 }
 
 header							
 {									
 	border:1px solid blue;			
-	padding:20px 20px;				
-	margin:50px auto;			
+	padding:20px 20px;
+	margin:0px;
+	font-size:24px;
+	text-align:center;
+	background-color:RGBA(240,255,235,255);
+	
 }
 
 aside							
 {									
 	border:1px solid blue;			
-	padding:20px 20px;				
-	margin:50px auto;		
+	padding:0px 20px;				
+	margin-top:20px;		
 }
 
 section							
 {									
 	border:1px solid blue;			
 	padding:20px 20px;				
-	margin:50px auto;		
+	margin:20px auto;		
 }
 
 footer							
 {									
-	border:0px solid blue;			
+	border:1px solid blue;			
 	padding:20px 20px;				
-	margin:50px auto;			
-}	
+	margin-top:20px;			
+}
+
+aside ul
+{
+	list-style-type:none;
+	border:1px solid black;
+	padding:0px;
+	
+}
+
+aside ul li
+{
+	border:1px solid red;
+	width:100px;
+	display:inline;
+}
 			
