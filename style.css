@@ -49,12 +49,13 @@ aside ul
 	list-style-type:none;
 	border:1px solid black;
 	padding:0px;
+	width: 140px;
 	
 }
 
 aside ul li
 {
 	border:1px solid red;
-	width:100px;
+	/*width:100px;*/
 }
 			
