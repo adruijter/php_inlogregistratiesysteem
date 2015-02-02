@@ -25,7 +25,7 @@
 				echo "<li><a href=''></a></li>";
 			break;
 			case "customer":
-				echo "<li><a href=''></a></li>";
+				echo "<li><a href='index.php?content=wijzig_wachtwoord'>wijzig wachtwoord</a></li>";
 			break;
 			case "photographer":
 				echo "<li><a href=''></a></li>";
