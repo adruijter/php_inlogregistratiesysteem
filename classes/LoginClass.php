@@ -222,12 +222,17 @@
 					  WHERE	 `id`	=	'".$_SESSION['id']."'";
 			$arrayLoginClassObjecten = self::find_by_sql($query);
 			$loginClassObject = array_shift($arrayLoginClassObjecten);
-			var_dump($loginClassObject);
-			echo $loginClassObject->getPassword()."<br>";
-			echo MD5($old_password);
-			//echo $query; 
-			exit();
-		
+			//var_dump($loginClassObject);
+			//echo $loginClassObject->getPassword()."<br>";
+			//echo MD5($old_password);
+			if (!strcmp(MD5($old_password),$loginClassObject->getPassword())) 
+			{
+				return true;			
+			}
+			else
+			{
+				return false;
+			}		
 		}	
 	}
 ?>
