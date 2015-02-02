@@ -214,5 +214,20 @@
 			echo "Uw wachtwoord is succesvol gewijzigd.";
 			header("refresh:4;url=index.php?content=login_form");		
 		}
+		
+		public static function check_old_password($old_password)
+		{
+			$query = "SELECT *
+					  FROM	 `login`
+					  WHERE	 `id`	=	'".$_SESSION['id']."'";
+			$arrayLoginClassObjecten = self::find_by_sql($query);
+			$loginClassObject = array_shift($arrayLoginClassObjecten);
+			var_dump($loginClassObject);
+			echo $loginClassObject->getPassword()."<br>";
+			echo MD5($old_password);
+			//echo $query; 
+			exit();
+		
+		}	
 	}
 ?>
