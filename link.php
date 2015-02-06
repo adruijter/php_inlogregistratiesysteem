@@ -16,6 +16,27 @@
 						<a href='index.php?content=developer/file_handling'>
 							file handling
 						</a>
+					  </li>					  
+					  <li><h5>CSS</h5></li>
+					  <li>
+						<ul>
+							<li>
+								<a href='index.php?
+										content=developer/css/syntax'>
+									syntax
+								</a>
+							</li>
+							<li>
+								<a href='index.php?content=developer/css/selectors'>
+									selectors
+								</a>
+							</li>
+							<li>
+								<a href='index.php?content=developer/css/howto'>
+									howto
+								</a>
+							</li>					
+						</ul					  
 					  </li>";
 			break;
 			case "administrator":

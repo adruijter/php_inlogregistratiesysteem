@@ -9,7 +9,17 @@
 		
 		if (LoginClass::check_old_password($_POST['oude_wachtwoord']))
 		{
-			echo "Goede wachtwoord";
+			//echo "Goede wachtwoord";
+			if (!strcmp($_POST['nieuw_wachtwoord'], $_POST['controle_wachtwoord']))
+			{
+				LoginClass::update_password($_SESSION['id'],$_POST['nieuw_wachtwoord']);
+				header("refresh:5;url=index.php?content=customerHomepage");
+			}
+			else
+			{
+				echo "U heeft u nieuwe wachtwoord de tweede keer verkeerd ingevoerd. Probeer het nog een keer";
+			header("refresh:5;url=index.php?content=wijzig_wachtwoord");
+			}
 		}
 		else
 		{
