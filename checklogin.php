@@ -30,19 +30,19 @@
 					header("location:index.php?content=developerHomepage");
 					break;
 				default :
-					header("location:index.php?content=login_form");			
+					header("location:index.php?content=Login_form");			
 			}
 		}
 		else
 		{
 			echo "Uw email/password combi bestaat niet of uw account is niet geactiveerd.";
-				  header("refresh:4;url=index.php?content=login_form");
+				  header("refresh:4;url=index.php?content=Login_form");
 		}	
 	}
 	else
 	{
 		echo "U heeft een van beide velden niet ingevuld, u wordt doorgestuurd<br>
 			  naar de inlogpagina.";
-		header("refresh:5;url=index.php?content=login_form");
+		header("refresh:5;url=index.php?content=Login_form");
 	}
 ?>

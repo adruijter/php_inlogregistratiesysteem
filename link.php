@@ -35,7 +35,12 @@
 								<a href='index.php?content=developer/css/howto'>
 									howto
 								</a>
-							</li>					
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/background'>
+									background
+								</a>
+							</li>
 						</ul					  
 					  </li>";
 			break;

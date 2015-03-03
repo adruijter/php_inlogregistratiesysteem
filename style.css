@@ -1,44 +1,50 @@
+html
+{
+    height: 50%;
+}
+
 body
 {
-	border:1px solid black;
+	border:0px solid black;
 	margin:0 auto;
 	width:900px;
 	font-family:Verdana;
+    height: 100%;
 }
 
 header, footer							
 {									
-	border:1px solid blue;			
+	border:0px solid blue;			
 	padding:20px 20px;
 	margin:0px;
 	font-size:24px;
 	text-align:center;
-	background-color:RGBA(240,255,235,255);
-	
+	background-color:RGBA(240,240,240,255);
 }
 
 aside							
 {									
-	border:1px solid blue;			
+	border:0px solid blue;			
 	padding:0px 20px;				
 	margin:20px 20px;
 	float:left;
 	width: 160px;
+    height: 5%;
 }
 
 section							
 {									
-	border:1px solid blue;			
+	border:0px solid blue;			
 	padding:20px 20px;				
 	margin:20px 20px 20px 0px;
 	float: right;
 	width: 590px;
-	min-height: 400px;
+    min-height: 100%;
 }
 
 footer							
 {									
-	border:1px solid blue;			
+	border:0px solid blue;			
 	padding:20px 20px;				
 	margin-top:20px;
 	clear: both;
@@ -47,15 +53,16 @@ footer
 aside ul
 {
 	list-style-type:none;
-	border:1px solid black;
+	border:0px solid black;
 	padding:0px;
 	width: 170px;
+    width: 5%;
 	
 }
 
 aside ul li
 {
-	border:1px solid red;
+	border:0px solid red;
 	/*width:100px;*/
 }
 			
