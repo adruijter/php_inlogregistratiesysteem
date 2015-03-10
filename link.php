@@ -41,6 +41,16 @@
 									background
 								</a>
 							</li>
+                            <li>
+								<a href='index.php?content=developer/css/csslink'>
+									link
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/text'>
+									text
+								</a>
+							</li>
 						</ul					  
 					  </li>";
 			break;

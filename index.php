@@ -6,7 +6,6 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-        hallo
 		<header>
 			<?php include("header.php"); ?>
 		</header>

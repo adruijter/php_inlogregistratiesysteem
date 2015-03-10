@@ -55,8 +55,6 @@ aside ul
 	list-style-type:none;
 	border:0px solid black;
 	padding:0px;
-	width: 170px;
-    width: 5%;
 	
 }
 
@@ -64,5 +62,40 @@ aside ul li
 {
 	border:0px solid red;
 	/*width:100px;*/
+}
+
+a
+{
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+a:link
+{
+    color: RGBA(10,10,10, 0.8);
+}
+
+a:visited
+{
+    color: RGBA(10,10,10, 0.8);
+}
+
+a:hover
+{
+    color: RGBA(30, 30, 30, 1);
+    font-size: 0.9em;
+}
+
+a:active
+{
+    font-size: 1.1em;
+}
+
+p
+{ 
+    color: RGBA(60, 60, 60, 1);
+    /*text-align: center;*/
+    text-align: justify;
+    /*text-align: right;*/
 }
 			
