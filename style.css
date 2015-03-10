@@ -12,6 +12,12 @@ body
     height: 100%;
 }
 
+@font-face
+{
+    font-family: BPdotsUnicaseSquare;
+    src: url(/fonts/BPdotsUnicaseSquare/BPdotsUnicaseSquare.ttf);
+}
+
 header, footer							
 {									
 	border:0px solid blue;			
@@ -42,6 +48,11 @@ section
     min-height: 100%;
 }
 
+section h3
+{
+    text-transform: capitalize;
+}
+
 footer							
 {									
 	border:0px solid blue;			
@@ -55,7 +66,7 @@ aside ul
 	list-style-type:none;
 	border:0px solid black;
 	padding:0px;
-	
+    text-align: right;	
 }
 
 aside ul li
@@ -88,14 +99,45 @@ a:hover
 
 a:active
 {
-    font-size: 1.1em;
+    font-size: 1.2em;
+    color: RGBA(1, 0, 80, 1);
 }
 
-p
+section p
 { 
-    color: RGBA(60, 60, 60, 1);
+    color: RGBA(1, 0, 80, 1);
     /*text-align: center;*/
     text-align: justify;
     /*text-align: right;*/
+    text-indent: 2em;
+    font-size: 0.8em;
 }
+
+section p
+{
+    line-height: 140%;
+}
+
+section p.times-roman
+{
+    font-family: BPdotsUnicaseSquare;
+    font-size: 1.5em;
+}
+
+section p.arial
+{
+    font-family: Arial;
+}
+
+section p.bauhaus-93
+{
+    font-family: 'Bauhaus 93' Arial;
+}
+
+ul#pyramidpanic_image
+{
+    list-style-image: url(images/pyramid.ico);
+}
+
+
 			

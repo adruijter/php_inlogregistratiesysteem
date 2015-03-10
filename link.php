@@ -51,6 +51,16 @@
 									text
 								</a>
 							</li>
+                            <li>
+								<a href='index.php?content=developer/css/font'>
+									font
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/table'>
+									table
+								</a>
+							</li>
 						</ul					  
 					  </li>";
 			break;
