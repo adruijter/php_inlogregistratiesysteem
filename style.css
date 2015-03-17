@@ -139,5 +139,34 @@ ul#pyramidpanic_image
     list-style-image: url(images/pyramid.ico);
 }
 
+table#login
+{
+    font-size: 0.8em;
+}
+
+table#login, table#login th, table#login td
+{
+    border: 1px solid RGBA(1, 0 ,80, 0.8);
+    border-collapse: collapse;
+    width: 80%;
+}
+
+table#login th
+{
+    text-align: left;
+    background-color: RGBA(1, 0, 80, 0.6);
+    color: white;
+}
+
+table#login td, th
+{
+    padding: 0.6em;
+}
+
+table#login tr:nth-of-type(2n + 1)
+{
+    background-color: RGBA(200,200,200,1);
+}
+
 
 			
