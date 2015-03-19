@@ -101,6 +101,11 @@
 									z-index
 								</a>
 							</li>
+                            <li>
+								<a href='index.php?content=developer/css/floating'>
+									floating
+								</a>
+							</li>
 						</ul					  
 					  </li>";
 			break;

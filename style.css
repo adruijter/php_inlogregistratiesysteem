@@ -337,3 +337,85 @@ section#z-index #div3
     z-index: 3;
 }
 
+section#floating
+{
+    float: none;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #6ad2d6;
+}
+
+section#floating div
+{
+    width: 100px;
+    height: 100px;
+}
+
+section#floating div
+{
+   margin-right:20px;
+   margin-bottom: 20px;
+   font-size: 0.7em;
+    overflow: hidden;
+}
+ 
+section#floating div img
+{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+section#floating #div1
+{
+    border: 1px solid black;
+    background-color: #e6e04b;
+    float:left;
+}
+
+section#floating #div2
+{
+    border: 1px solid black;
+    background-color: #e666ce;
+    float: left;
+}
+
+section#floating #div3
+{
+    border: 1px solid black;
+    background-color: #755feb;
+    float:left;
+
+}
+
+section#floating #div4
+{
+    border: 1px solid black;
+    background-color: #5febd5;
+    float: left;
+}
+
+section#floating #div5
+{
+    border: 1px solid black;
+    background-color: #5feb64;
+    width: 470px;
+    clear: both;
+}
+
+section#floating #div6
+{
+    border: 1px solid black;
+    background-color: #eb755f;
+    float:left;
+}
+
+section#floating #div7
+{
+    border: 1px solid black;
+    background-color: #5febe0;
+    float:left;
+    width: 350px;
+}
+
+
