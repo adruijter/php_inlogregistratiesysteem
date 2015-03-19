@@ -61,6 +61,46 @@
 									table
 								</a>
 							</li>
+                            <li>
+								<a href='index.php?content=developer/css/boxmodel'>
+									boxmodel
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/outline'>
+									outline
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/margin'>
+									margin
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/padding'>
+									padding
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/dimensions'>
+									dimensions
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/display'>
+									display
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/positioning'>
+									positioning
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/z-index'>
+									z-index
+								</a>
+							</li>
 						</ul					  
 					  </li>";
 			break;

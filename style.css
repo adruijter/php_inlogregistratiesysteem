@@ -35,13 +35,13 @@ aside
 	margin:20px 20px;
 	float:left;
 	width: 160px;
-    height: 5%;
+    height: 200%;
 }
 
 section							
 {									
 	border:0px solid blue;			
-	padding:20px 20px;				
+	padding:0px 20px;				
 	margin:20px 20px 20px 0px;
 	float: right;
 	width: 590px;
@@ -109,7 +109,7 @@ section p
     /*text-align: center;*/
     text-align: justify;
     /*text-align: right;*/
-    text-indent: 2em;
+    text-indent: 0em;
     font-size: 0.8em;
 }
 
@@ -168,5 +168,172 @@ table#login tr:nth-of-type(2n + 1)
     background-color: RGBA(200,200,200,1);
 }
 
+p#boxmodel_left
+{
+    display: inline;   
+    border: 1px solid rgb(149, 136, 136);
+    width:133px;
+    margin: 10px;
+    padding: 5px;
+    /*20 + 10 + 2 = 32     630/2 = 315*/
+    float:left;
+    
+}
 
-			
+p#boxmodel_right
+{
+    display:inline;
+    border: 1px solid rgb(149, 136, 136);
+    width: 133px;
+    margin: 10px;
+    padding: 5px;
+    /*20 + 10 + 2 = 32   */
+    float: right;    
+}
+
+p.outline
+{
+    border: 7px solid rgb(159, 150, 150);
+    outline-style: inset;
+    outline-color: rgb(212, 212, 212);
+}
+
+p#margin
+{
+   border: 1px solid rgb(166, 191, 27);
+   width: 50%;
+   margin: 0px auto;
+   margin-top : 10px;
+   margin-bottom : 20px;
+   margin-left : 20px;
+   margin-right : 20px;
+   margin: 23px 40px 100px 50px;
+   margin: 50px 100px;
+}
+
+p#padding
+{
+    width:200px;
+    border: 2px solid grey;
+    background-color: rgb(235, 195, 195);
+    padding-top : 10px;
+    padding-bottom : 20px;
+    padding-left : 20px;
+    padding-right : 20px;
+    padding: 23px 40px 100px 50px;
+    padding: 50px 100px;
+}
+
+div#dimensions
+{
+    font-size: 0.8em;
+    border: 2px solid rgb(134, 134, 250);
+    width: 40%;
+    max-height: 300px;
+    overflow:auto;
+    
+}
+
+img.picture
+{
+    display:inline;
+    visibility:visible;
+    margin: 10px;
+    
+}
+
+p#block_or_inline
+{
+    background-color: rgb(222, 138, 138);
+    display: block;
+}
+
+section#positioning
+{
+    float: none;
+    margin: 0px;
+    padding: 0px;
+    //position: relative;
+    border: 1px solid #6ad2d6;
+}
+
+section#positioning div
+{
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+section#positioning #div1
+{
+    border: 1px solid black;
+    background-color: #e6e04b;
+    //position: fixed;
+    //bottom: 0px;
+    //left: 0px;
+}
+
+section#positioning #div2
+{
+    border: 1px solid black;
+    background-color: #e666ce;
+    //position: relative;
+    //bottom: 0px;
+    //left: 100px;    
+}
+
+section#positioning #div3
+{
+    border: 1px solid black;
+    background-color: #755feb;
+    //position: relative;
+    //top:0px;
+    //left:300px;
+}
+
+section#z-index
+{
+    float: none;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    border: 1px solid #6ad2d6;
+}
+
+section#z-index div
+{
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+section#z-index #div1
+{
+    border: 1px solid black;
+    background-color: #e6e04b;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+section#z-index #div2
+{
+    border: 1px solid black;
+    background-color: #e666ce;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+section#z-index #div3
+{
+    border: 1px solid black;
+    background-color: #755feb;
+    position: absolute;
+    top:40px;
+    left:40px;
+    z-index: 3;
+}
+
