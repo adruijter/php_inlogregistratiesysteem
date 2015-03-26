@@ -40,7 +40,7 @@ aside
 
 section							
 {									
-	border:0px solid blue;			
+	border:1px solid blue;			
 	padding:0px 20px;				
 	margin:20px 20px 20px 0px;
 	float: right;
@@ -417,5 +417,111 @@ section#floating #div7
     float:left;
     width: 350px;
 }
+
+div#uitlijnen
+{
+    border: 1px solid #7b1c1c;
+    background-color: red;
+    width: 60%;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 1.6em;
+    padding:2em;
+}
+
+p 
+{
+    /*background-color: #e36e6e;*/
+}
+
+/*Descendant selector*/
+div#combinators p
+{
+   /* background-color: #f2ea33; */
+}
+
+/* Child selector */
+div#combinators > p
+{    
+   /* background-color: #30e330; */
+}
+
+/* General sibling selector */
+div#combinators ~ p
+{
+    /* background-color: #12ffee; */
+}
+
+/* adjacent sibling selector */
+div#combinators + p
+{
+    background-color: #12ff12; 
+}
+
+
+/* Pseudoclass :hover */
+form#pseudoclasses ~ p:hover
+{
+    //background-color: red;
+}
+
+/* Pseudoclass :first-child */
+p:last-child
+{
+    //background-color: red;
+}
+
+form#pseudoclasses input:disabled
+{
+    //background-color: red;
+}
+
+li#csskop
+{
+    margin-top: 2em;
+}
+
+p#pseudoelement::first-letter 
+{
+    font-size: 4em;
+    color: blue;
+}
+
+p#pseudoelement::after
+{
+    content: "Dit is content na het p tag";
+    background-color: yellow;
+}
+
+img#koala
+{
+    opacity: 0.4;
+    filter: alpha(opacity=40); /*I.E. < 8*/
+    width: 50%;
+}
+
+img#koala:hover
+{
+    opacity: 1.0;
+    width: 75%;
+}
+
+img#hamster
+{
+    opacity: 1.0;
+    width: 50%;
+}
+
+div#test:
+{
+    opacity: 0.1;
+    width: 75%;
+    background-color: red;
+    float:left;
+}
+
+
+
+
 
 

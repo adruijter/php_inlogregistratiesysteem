@@ -17,7 +17,7 @@
 							file handling
 						</a>
 					  </li>					  
-					  <li><h5>CSS</h5></li>
+					  <li id='csskop'>CSS</li>
 					  <li>
 						<ul>
 							<li>
@@ -104,6 +104,26 @@
                             <li>
 								<a href='index.php?content=developer/css/floating'>
 									floating
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/combinators'>
+									combinators
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/pseudoclasses'>
+								    pseudo classes
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/pseudoelements'>
+								    pseudo elements
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/opacity'>
+								   opacity
 								</a>
 							</li>
 						</ul					  
