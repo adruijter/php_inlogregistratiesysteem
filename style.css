@@ -893,25 +893,25 @@ div#transition:hover
     
 }
 
-#php .element, .outer-container {
+.element, .outer-container {
     width: 160px;
-    height: 100px;
+    height: 60px;
 }
 
-#php .outer-container {
+.outer-container {
     border: 0px solid black;
     position: relative;
     overflow: hidden;
 }
 
-#php .inner-container {
+.inner-container {
     position: absolute;
     left: 0;
     overflow-x: hidden;
     overflow-y: scroll;
 }
 
-#php .inner-container::-webkit-scrollbar {
+.inner-container::-webkit-scrollbar {
     display: none;
 }
 
