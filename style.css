@@ -30,7 +30,7 @@ header, footer
 
 aside							
 {									
-	border:0px solid blue;			
+	border:1px solid blue;			
 	padding:0px 20px;				
 	margin:20px 20px;
 	float:left;
@@ -40,7 +40,7 @@ aside
 
 section							
 {									
-	border:1px solid blue;			
+	border:0px solid blue;			
 	padding:0px 20px;				
 	margin:20px 20px 20px 0px;
 	float: right;
@@ -476,9 +476,9 @@ form#pseudoclasses input:disabled
     //background-color: red;
 }
 
-li#csskop
+li#csskop, li#php
 {
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 p#pseudoelement::first-letter 
@@ -519,6 +519,406 @@ div#test:
     background-color: red;
     float:left;
 }
+
+#explorer1
+{
+    width: 32px;
+    height: 32px;
+    background: url("images/Explorer.gif") 0px 0px;
+}
+
+#explorer2
+{
+    width: 32px;
+    height: 32px;
+    background: url("images/Explorer.gif") -32px 0px;
+}
+
+#explorer3
+{
+    width: 32px;
+    height: 32px;
+    background: url("images/Explorer.gif") -64px 0px;
+}
+
+#explorer4
+{
+    width: 32px;
+    height: 32px;
+    background: url("images/Explorer.gif") -96px 0px;
+}
+
+@media screen
+{
+   #media
+   {
+       font-family: "Comic Sans MS"; 
+   }    
+}
+
+@media print
+{
+    #media
+    {
+        font-family: "Comic Sans MS";
+        font-size: 3em;
+    }
+}
+
+
+
+input[type="text"]
+{
+    background-color: red;   
+}
+
+input[type]
+{
+    border: 2px solid yellow;
+    display: block;
+    margin: 1em;
+}
+
+input[name~="naam"]
+{
+    background-color: pink;
+}
+
+input[name|="tbl"]
+{
+    width: 300px;
+}
+
+input[name^="le"]
+{
+    width: 400px;
+    background: blue;
+}
+
+input[name$="am"]
+{
+    width: 50px;
+    background: orange;
+}
+
+input[name*="ft"]
+{
+    width: 250px;
+    background: black;
+}
+
+div#round
+{
+    background-color: red;
+    width:300px;
+    margin: 0px auto;
+    border-radius: 100px;
+    text-align: center;
+    padding:3em;
+    font-size: 3em;        
+}
+
+#gradient1
+{
+    background: linear-gradient(red, white, blue);
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+#gradient2
+{
+    background: linear-gradient(to bottom, red, white, blue);
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+#gradient3
+{
+    background: linear-gradient(to right, red, white, blue);
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+#gradient4
+{
+    background: linear-gradient(to left, red, white, blue);
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+#gradient5
+{
+    background: linear-gradient(to left bottom, red, white, blue);
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+#gradient6
+{
+    background: linear-gradient(to right bottom, red, white, blue);
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+#gradient7
+{
+    background: linear-gradient(-10deg, red, white, blue);
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+#gradient8
+{
+    background: linear-gradient(to right bottom, RGBA(255,0,0,0.5), white, blue);
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+#gradient9
+{
+    background: linear-gradient(to right, rgba(195, 196, 193, 1), rgba(195, 196, 193, 0),  rgba(195, 196, 193, 1));
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+
+#gradient10
+{
+    background: linear-gradient(to right bottom, red, white, blue);
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+#gradient11
+{
+    background: linear-gradient(to right bottom, red, white, blue);
+    font-size: 3em;
+}
+
+#gradient12
+{
+    background: linear-gradient(to right bottom, red, white, blue);
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+
+#gradient13
+{
+    background: linear-gradient(to right bottom, red, white, blue);
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+h3#text_shadow
+{
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+
+h3#text_shadow_neon
+{
+    color: white;
+    text-shadow: 0px 0px 3px red;
+}
+
+#box-shadow
+{
+    box-shadow: 4px 4px 3px #fdb3b3;
+    background-color: #d3cdcd;
+    padding:2em;
+    text-align: center;
+}
+
+div#tekst
+{
+    white-space: nowrap;
+    border: 1px solid brown;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div#tekst:hover
+{
+    overflow: visible;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+#two-d-transform-translate
+{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding-top: 0em;
+}
+
+#two-d-transform-rotate
+{
+    width: 200px;
+    height: 200px;
+    background-color: #8c8cde;
+    color: white;
+    text-align: center;
+    padding-top: 0em;
+}
+
+#two-d-transform-scale
+{
+    width: 200px;
+    height: 200px;
+    background-color: #aeaee0;
+    color: white;
+    text-align: center;
+    padding-top: 0em;
+}
+
+#two-d-transform-skewx
+{
+    width: 200px;
+    height: 200px;
+    background-color: #d2d2ea;
+    color: white;
+    text-align: center;
+    padding-top: 0em;
+}
+
+#two-d-transform-matrix
+{
+    width: 200px;
+    height: 200px;
+    background-color: #8a8a95;
+    color: white;
+    text-align: center;
+    padding-top: 0em;
+}
+
+#two-d-transform-translate:hover
+{
+    transform:translate(50px, 50px);
+}
+
+#two-d-transform-rotate:hover
+{
+    transform:rotate(45deg);
+}
+
+#two-d-transform-scale:hover
+{
+    transform: scale(0.5, 2);
+}
+
+#two-d-transform-skewx:hover
+{
+    transform: skew(30deg);
+}
+
+#two-d-transform-matrix:hover
+{
+    transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+
+div#transform-3d
+{
+    width: 200px;
+    height: 200px;
+    background-color: #ebaeae;
+    //transform: rotateX(45deg);
+    //transform: rotateY(45deg);
+    transform: rotateZ(10deg);
+}
+
+div#transition
+{
+    width: 200px;
+    height: 200px;
+    background-color: #f5c0c0;
+    transition: height 5s, background-color 5s, color 5s, border 5s;
+    color: black;
+    border: 2px solid green;
+}
+
+div#transition:hover
+{
+    height: 50px;
+    background-color: blue;
+    color: white;
+    border: 5px dashed pink;
+}
+
+#container ul, #container li
+{
+    //border: 1px solid black;
+    list-style-type: none;
+    background-color: RGB(240,240,240);
+}
+
+#container ul
+{
+    padding-left: 0px;
+    width: 44%;
+    margin-right: 20px;
+}
+    
+#container ul h4
+{
+    margin-top: 0px;
+}
+    
+#container ul.left
+{
+    float: left;
+    padding: 10px 10px 10px 10px;
+    
+}
+    
+#container ul.right
+{
+    float: right;
+    margin-right: 0px;
+    padding: 10px 10px 10px 10px;
+}
+    
+#container div
+{
+    
+    text-align: left;
+    clear: both;
+    padding: 10px;
+    background-color: RGB(240,240,240);
+    
+    
+}
+
+#php .element, .outer-container {
+    width: 160px;
+    height: 100px;
+}
+
+#php .outer-container {
+    border: 0px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+#php .inner-container {
+    position: absolute;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#php .inner-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
 
 
 

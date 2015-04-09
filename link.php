@@ -7,19 +7,29 @@
 		switch ($_SESSION['userrole'])
 		{
 			case "developer":
-				echo "<li>
-						<a href='index.php?content=developer/arrays'>
-							tutorial array
-						</a>
+				echo "<li id='php'>
+						PHP
 					  </li>
-					  <li>
-						<a href='index.php?content=developer/file_handling'>
-							file handling
-						</a>
-					  </li>					  
+                      <div class='outer-container'>
+                        <div class='inner-container'>
+                            <div class='element'>
+                              <li>
+                                <a href='index.php?content=developer/arrays'>
+                                    tutorial array
+                                </a>
+                              </li>
+                              <li>
+                                <a href='index.php?content=developer/file_handling'>
+                                    file handling
+                                </a>
+                              </li>                      
+                            </div>
+                        </div>
+                      </div>
 					  <li id='csskop'>CSS</li>
-					  <li>
-						<ul>
+                      <div class='outer-container'>
+                        <div class='inner-container'>
+                            <div class='element'>
 							<li>
 								<a href='index.php?
 										content=developer/css/syntax'>
@@ -126,7 +136,64 @@
 								   opacity
 								</a>
 							</li>
-						</ul					  
+                            <li>
+								<a href='index.php?content=developer/css/imagesprites'>
+								   image sprites
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/mediatypes'>
+								    @media types
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/attributeselectors'>
+								    attribute selectors
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/roundedcorners'>
+								    rounded corners
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/gradient'>
+								    gradient
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/shadow_effects'>
+								    shadow effects
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/tekst'>
+				                tekst
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/2D-transforms'>
+				                2D-transforms
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/3D-transforms'>
+				                3D-transforms
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/transitions'>
+				                transitions
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/scrolling'>
+				                scrolling
+								</a>
+							</li>
+                             </div>
+                        </div>
+                      </div>					  
 					  </li>";
 			break;
 			case "administrator":

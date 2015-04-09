@@ -33,8 +33,7 @@
 			session_unset('email');
 			session_unset('userrole');		
 			session_destroy();
-			
-			unset($this->id);
+            unset($this->id);
 			unset($this->email);
 			unset($this->userrole);
 		}

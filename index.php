@@ -9,12 +9,13 @@
 		<header>
 			<?php include("header.php"); ?>
 		</header>
+        <section>
+			<?php include("redirect.php"); ?>
+		</section>	
 		<aside>
 			<?php include("link.php"); ?>
 		</aside>
-		<section>
-			<?php include("redirect.php"); ?>
-		</section>		
+			
 		<footer>
 			<?php include("footer.php"); ?>
 		</footer>	
