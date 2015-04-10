@@ -14,15 +14,45 @@
                         <div class='inner-container'>
                             <div class='element'>
                               <li>
-                                <a href='index.php?content=developer/arrays'>
+                                <a href='index.php?content=developer/php/arrays'>
                                     tutorial array
                                 </a>
                               </li>
                               <li>
-                                <a href='index.php?content=developer/file_handling'>
+                                <a href='index.php?content=developer/php/file_handling'>
                                     file handling
                                 </a>
-                              </li>                      
+                              </li>  
+                              <li>
+                                <a href='index.php?content=developer/php/conditional_statements'>
+                                    conditional statements
+                                </a>
+                              </li> 
+                              <li>
+                                <a href='index.php?content=developer/php/foreach'>
+                                    foreach
+                                </a>
+                              </li> 
+                              <li>
+                                <a href='index.php?content=developer/php/while_loops'>
+                                    while loops
+                                </a>
+                              </li> 
+                              <li>
+                                <a href='index.php?content=developer/php/switch_case'>
+                                    switch case
+                                </a>
+                              </li>
+                              <li>
+                                <a href='index.php?content=developer/php/for_loop'>
+                                    for loop
+                                </a>
+                              </li>
+                              <li>
+                                <a href='index.php?content=developer/php/superglobals'>
+                                    superglobals
+                                </a>
+                              </li>
                             </div>
                         </div>
                       </div>
@@ -189,6 +219,16 @@
                             <li>
 								<a href='index.php?content=developer/css/scrolling'>
 				                scrolling
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/animations'>
+				                animations
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/multiple_columns'>
+				                multiple columns
 								</a>
 							</li>
                              </div>

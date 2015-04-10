@@ -30,12 +30,12 @@ header, footer
 
 aside							
 {									
-	border:1px solid blue;			
+	border:0px solid blue;			
 	padding:0px 20px;				
 	margin:20px 20px;
 	float:left;
 	width: 160px;
-    height: 200%;
+    //height: 200%;
 }
 
 section							
@@ -895,7 +895,7 @@ div#transition:hover
 
 .element, .outer-container {
     width: 160px;
-    height: 60px;
+    height: 120px;
 }
 
 .outer-container {
@@ -915,9 +915,75 @@ div#transition:hover
     display: none;
 }
 
+@-webkit-keyframes beatinghart
+{
+    0%  { padding: 20% 0px;}    
+    40% { padding: 10% 0px; left: 250px; top: 0px;}
+    60% { padding: 15% 0px;}
+    60% { padding: 10% 0px; left: 250px; top: 100px;}
+    70% { padding: 15% 0px; left: 0px; top: 100px;}
+    90% { padding: 10% 0px;}
+    100% { padding: 20% 0px;left: 0px; top: 0px; }
+}
 
+@keyframes beatinghart
+{
+    0%  { padding: 20% 0px;}    
+    40% { padding: 10% 0px; left: 250px; top: 0px;}
+    60% { padding: 15% 0px;}
+    60% { padding: 10% 0px; left: 250px; top: 100px;}
+    70% { padding: 15% 0px; left: 0px; top: 100px;}
+    90% { padding: 10% 0px;}
+    100% { padding: 20% 0px;left: 0px; top: 0px; }
+}
 
+#animation
+{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    background-color: #4a4949;
+    color: white;
+    width: 40%;
+    text-align: center;
+    padding:20% 0px;
+    border-radius: 20%;
+    font-family: "BPdotsUnicaseSquare";
+    font-size: 3em;
+    animation-name: beatinghart;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: beatinghart;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: beatinghart;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
 
+#multicol
+{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    
+    -webkit-column-rule: 1px solid #a06969;
+    -moz-column-rule: 1px solid #a06969;
+    column-rule: 1px solid #a06969;
+    
+}
+
+#colspan
+{
+    background-color: #808080; 
+    color: white;
+    padding:0.2em;
+    -webkit-column-span: all;
+}
 
 
 
