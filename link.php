@@ -56,7 +56,7 @@
                             </div>
                         </div>
                       </div>
-					  <li id='csskop'>CSS</li>
+					  <li id='csskop'>CSS3</li>
                       <div class='outer-container'>
                         <div class='inner-container'>
                             <div class='element'>
@@ -229,6 +229,11 @@
                             <li>
 								<a href='index.php?content=developer/css/multiple_columns'>
 				                multiple columns
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/user_interface'>
+				                User Interface
 								</a>
 							</li>
                              </div>
