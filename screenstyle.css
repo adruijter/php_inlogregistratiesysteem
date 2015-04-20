@@ -1,0 +1,22 @@
+@media screen and (max-width: 600px)
+{
+    div.background
+    {
+        background-color: rgba(221, 221, 221, 0.9);
+    }
+}
+
+@media screen and (max-height: 500px)
+{
+    div.background div#div1
+    {
+        background-color: rgba(129, 212, 136, 0.9);
+    }
+    
+    div.background div#div2
+    {
+        background-color: rgba(129, 212, 136, 0.9);
+    }
+    
+    
+}

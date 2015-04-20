@@ -7,7 +7,43 @@
 		switch ($_SESSION['userrole'])
 		{
 			case "developer":
-				echo "<li id='php'>
+				echo "<li id='javascript'>
+                        JS Tutorial
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/home'>
+                            Home
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/introduction'>
+                            Introduction
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/where_to'>
+                            Where to
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/output'>
+                            Output
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/syntax'>
+                            syntax
+                        </a>
+                      </li>
+                      <li id='jquery'>
+                        JQuery Tutorial
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/get_started'>
+                            Get Started
+                        </a>
+                      </li>
+                      <li id='php'>
 						PHP
 					  </li>
                       <div class='outer-container'>
@@ -234,6 +270,11 @@
                             <li>
 								<a href='index.php?content=developer/css/user_interface'>
 				                User Interface
+								</a>
+							</li>
+                            <li>
+								<a href='index.php?content=developer/css/box_sizing'>
+				                Box sizing
 								</a>
 							</li>
                              </div>
