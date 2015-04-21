@@ -16,16 +16,35 @@
     var n = 1
     $(function(){
         $('#cssVerander').click(function(){
-            // Hier komt je script.......
+            // Hier komt je script.......            
+            /*
+            $('p:nth-child(' + n + ')').css('border', '2px solid grey').
+                                        css('width', '100px').
+                                        css('height', '100px');
             
-            $('p:nth-child(2)').css('border', '2px solid grey').
-                                css('width', '100px').
-                                css('height', '100px');
+            */
             
-        });       
+            var test = 
+            
+            $('p:nth-child(' + n + ')').css({ 'border' : '2px solid grey',
+                                              'width'  : '100px',
+                                              'height' : '100px'});
+            
+            if (n < 6)
+            {
+               n++; 
+            }
+        });
+        
+        $('p').click(function(){
+            
+            $(this).css({ 'border' : '0px solid grey',
+                         'width'  : 'inherit',
+                         'height' : 'inherit'});
+            n = 1;
+        });
+        
     });
-
-
 </script>
 
 
@@ -49,14 +68,10 @@ $(selector).action(function(){<br>
 <button id="cssVerander">Klik hier!</button>
 
 <ul>
+    <li>Opdrachten</li>
     <li>Maak de eerste paragraaf grijs</li>
     <li>Maak een knop die wanneer er op geklikt wordt elke paragraaf een border geeft en een width en height van 100 bij 100</li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Wanneer je klikt op een &lt;p&gt;-tag, moet de oude waarde van het &lt;p&gt;-tag weer hersteld worden</li>    
 </ul>
 
 

@@ -45,7 +45,12 @@
                       </li>
                       <li>
                         <a href='index.php?content=developer/jquery/syntax'>
-                            Syntax
+                            Syntax/Selectors
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/events'>
+                            events
                         </a>
                       </li>
                       <li id='php'>
