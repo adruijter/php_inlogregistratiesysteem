@@ -25,17 +25,18 @@ header, footer
 	margin:0px;
 	font-size:24px;
 	text-align:center;
-	background-color:RGBA(240,240,240,255);
+	background-color:rgb(232, 232, 232);
 }
 
 aside							
 {									
 	border:0px solid blue;			
 	padding:0px 20px;				
-	margin:20px 20px;
+	margin:20px 20px 20px 0px;
 	float:left;
 	width: 160px;
     //height: 200%;
+    background-color:rgb(232, 232, 232);
 }
 
 section							
@@ -112,7 +113,7 @@ section p
     text-align: justify;
     /*text-align: right;*/
     text-indent: 0em;
-    font-size: 1.4em;
+    font-size: 1em;
 }
 
 section p

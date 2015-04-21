@@ -1,7 +1,6 @@
 <script>
     $(document).ready(function(){
         //alert("Hallo Wereld");
-        //Stukje code
         
         $('p').click(function(){
             $('p').hide();
@@ -18,24 +17,24 @@
             $('ul#exercise_01 li:nth-child(' + n + ')').hide(); 
             if ( n < 10)
             {
-                n = n + 1;
+                n++;
             }
             else
             {
                 n = 1;
             }
-            console.log(n + "Hallo");
+            console.log("De variabele n heeft de waarde: " + n);
         });
         
+        var j = 1
         $('button#laat_zien').click(function(){
             //alert("Haalo");
             //console.log("Hallo");
-            $('ul#exercise_01 li:nth-child(3)').show();
-            n = 1;
+            
+            $('ul#exercise_01 li:nth-child(' + j + ')').show();
         });
         
-    });
-    
+    });    
 </script>
 
 
