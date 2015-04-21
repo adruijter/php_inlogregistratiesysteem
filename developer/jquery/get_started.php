@@ -15,24 +15,27 @@
         $('button#verdwijn').click(function(){
             //alert("sldkfjs");
             $('ul#exercise_01 li:nth-child(' + n + ')').hide(); 
-            if ( n < 10)
+            if ( n <= 10)
             {
                 n++;
-            }
-            else
-            {
-                n = 1;
             }
             console.log("De variabele n heeft de waarde: " + n);
         });
         
-        var j = 1
+        
         $('button#laat_zien').click(function(){
             //alert("Haalo");
             //console.log("Hallo");
-            
-            $('ul#exercise_01 li:nth-child(' + j + ')').show();
+            if ( n > 1)
+            {
+                $('ul#exercise_01 li:nth-child(' + (n-1) + ')').show();
+                n--;
+            }
+            console.log("De variabele n heeft de waarde: " + n);
         });
+        
+        $('ul#exercise_01').css('background-color', '#b4b4ff').
+                            css('border', '2px solid grey')
         
     });    
 </script>

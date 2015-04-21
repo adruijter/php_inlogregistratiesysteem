@@ -43,6 +43,11 @@
                             Get Started
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/syntax'>
+                            Syntax
+                        </a>
+                      </li>
                       <li id='php'>
 						PHP
 					  </li>
