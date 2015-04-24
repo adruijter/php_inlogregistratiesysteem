@@ -37,6 +37,74 @@ Net als bij PHP kun je bij JavaScript tekst uitcommentarieren met
 <ul>
     <li>// Voor een regel code</li>
     <li>/* Voor meerdere regels code */</li>
-</ul>  
+</ul>
+
+
+
+
+<h4>JavaScript is case-sensitive</h4>
+<script>
+    vloeistof = "Water"; 
+    function laatZien(obj)
+    {
+        obj.innerHTML = "Dubbel klik op mij!";
+        document.getElementById('showtext').innerHTML = "De variabele vloeistof heeft nu de waarde: " + vloeistof;
+    }
+    
+    function verdwijn(obj)
+    {
+        obj.innerHTML = "Klik op mij!"
+        document.getElementById('showtext').innerHTML = "";
+    }
+    
+    function aanmoediging(obj)
+    {
+        if ( obj.innerHTML == 'Klik op mij!')
+        obj.innerHTML = "Ja, klik maar!";
+        else
+        obj.innerHTML = "Ja, dubbel klik maar!"
+    }
+    
+    function oudetekstterugzetten(obj)
+    {
+        //alert(obj.innerHTML);
+        if ( obj.innerHTML == 'Ja, klik maar!')
+        {
+            obj.innerHTML = "Klik op mij!";
+        }        
+        else if ( obj.innerHTML == 'Ja, dubbel klik maar!')
+        {
+            obj.innerHTML = "Dubbel klik op mij!"
+        }
+        
+    }
+    
+    function veranderkleur(obj)
+    {
+        obj.style.backgroundColor = '#b4afaf';
+    }
+    
+    function veranderkleurterug(obj)
+    {
+        obj.style.backgroundColor = 'rgb(231, 231, 231)';
+    }
+</script>
+
+<p id='showtext'></p>
+<button onclick='laatZien(this);'
+        ondblclick='verdwijn(this);'
+        onmouseenter='aanmoediging(this);'
+        onmouseleave='oudetekstterugzetten(this)'
+        onmousedown='veranderkleur(this);'
+        onmouseup='veranderkleurterug(this)'>Klik op mij!</button>
+
+<p onclick='laatZien(this);'
+        ondblclick='verdwijn(this);'
+        onmouseenter='aanmoediging(this);'
+        onmouseleave='oudetekstterugzetten(this)'
+        onmousedown='veranderkleur(this);'
+        onmouseup='veranderkleurterug(this)'>Dit is een paragraaf</p>
+
+
 
 
