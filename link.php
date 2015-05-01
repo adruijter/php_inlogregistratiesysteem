@@ -70,6 +70,17 @@
                         <a href='index.php?content=developer/jquery/events'>
                             events
                         </a>
+                      </li> 
+                      <li>
+                        <a href='index.php?content=developer/jquery/hide_show'>
+                            Hide/Show
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/fade'>
+                            fade
+                        </a>
+                      </li>
                       <li id='php'>
 						PHP
 					  </li>
