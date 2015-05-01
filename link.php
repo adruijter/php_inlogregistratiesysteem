@@ -35,6 +35,24 @@
                             syntax
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/statements'>
+                            Statements
+                        </a>
+                      </li>
+                      <li id='javascriptgame'>
+                        JS Game
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/jsgame/jsgame_intro'>
+                            Intro
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/jsgame/user_defined_objects'>
+                            User-defined Objects
+                        </a>
+                      </li>
                       <li id='jquery'>
                         JQuery Tutorial
                       </li>
@@ -52,7 +70,6 @@
                         <a href='index.php?content=developer/jquery/events'>
                             events
                         </a>
-                      </li>
                       <li id='php'>
 						PHP
 					  </li>

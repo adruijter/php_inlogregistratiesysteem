@@ -98,13 +98,6 @@ Net als bij PHP kun je bij JavaScript tekst uitcommentarieren met
         onmousedown='veranderkleur(this);'
         onmouseup='veranderkleurterug(this)'>Klik op mij!</button>
 
-<p onclick='laatZien(this);'
-        ondblclick='verdwijn(this);'
-        onmouseenter='aanmoediging(this);'
-        onmouseleave='oudetekstterugzetten(this)'
-        onmousedown='veranderkleur(this);'
-        onmouseup='veranderkleurterug(this)'>Dit is een paragraaf</p>
-
 
 
 
