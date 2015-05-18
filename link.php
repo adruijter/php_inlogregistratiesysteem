@@ -81,6 +81,11 @@
                             fade
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/slide'>
+                            slide
+                        </a>
+                      </li>
                       <li id='php'>
 						PHP
 					  </li>
