@@ -86,6 +86,11 @@
                             slide
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/animate'>
+                            animate
+                        </a>
+                      </li>
                       <li id='php'>
 						PHP
 					  </li>
