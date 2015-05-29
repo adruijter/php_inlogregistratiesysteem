@@ -40,6 +40,34 @@
                             Statements
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/comments'>
+                            comments
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/variables'>
+                            variables
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/data-types'>
+                            data-types
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/functions'>
+                            functions
+                        </a>
+                      </li>
+                      <li id='json'>
+                        JSON
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/json/intro'>
+                            Intro
+                        </a>
+                      </li>
                       <li id='javascriptgame'>
                         JS Game
                       </li>
@@ -89,6 +117,11 @@
                       <li>
                         <a href='index.php?content=developer/jquery/animate'>
                             animate
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/chaining'>
+                            chaining
                         </a>
                       </li>
                       <li id='php'>
