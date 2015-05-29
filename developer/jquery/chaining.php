@@ -20,8 +20,7 @@ div#chainingDiv
 <button id="btnChaining">Klik op mij</button>
 
 <script>
-    $(document).ready()
-    {
+    $(document).ready(function(){   
         //Maak een selector voor de button
         $("#btnChaining").click(function(){
             //alert("Hallo ik werk");
@@ -38,7 +37,6 @@ div#chainingDiv
         });
         
         
-    }
-
+    });
 
 </script>

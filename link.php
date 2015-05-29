@@ -124,6 +124,11 @@
                             chaining
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/getContent'>
+                            Get Content
+                        </a>
+                      </li>
                       <li id='php'>
 						PHP
 					  </li>
