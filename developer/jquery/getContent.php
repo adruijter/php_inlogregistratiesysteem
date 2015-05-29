@@ -8,7 +8,7 @@ button
 
 </style>
 
-<h3>Get Content</h3>
+<h3 id="h3verander">Get Content</h3>
 <ul id="getContent">
     <li>Dit is de eerste regel</li>
     <li>Dit is de tweede regel</li>
@@ -20,8 +20,11 @@ button
 
 <button id="btnFirst">klik op mijn voor de tekst van de eerste regel</button>
 <button id="btnSecond">Klik op mij voor de html van de ul</button>
-<button id="btnFourth"></button>
+<button id="btnFourth">Klik op mij en de tekst van het derde listitem verandert</button>
 <!-- li:nth-child(3) -->
+
+<button id="btnFifth">Klik op mij en de tekst van het &lt;h3&gt; element verandert</button>
+
 <hr>
 
 <h3>Vul hieronder uw naam in</h3>
@@ -49,8 +52,15 @@ button
             alert(waarde);
         });
         
-        
-        
+        $("#btnFourth").click(function(){
+            //alert("Hallo");
+            $("ul#getContent li:nth-child(3)").html("<b>Ik ben nu veranderd in andere tekst</b>");            
+        });        
+           
+        $("#btnFifth").click(function(){
+            //alert("Hallo");
+            $("h3#h3verander").html("<h2>Dit is een oefening met GetContent</h2>");            
+        });       
     });
     
 
