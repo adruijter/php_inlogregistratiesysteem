@@ -60,6 +60,11 @@
                             functions
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/bmi_meter'>
+                            bmi meter
+                        </a>
+                      </li>
                       <li id='json'>
                         JSON
                       </li>

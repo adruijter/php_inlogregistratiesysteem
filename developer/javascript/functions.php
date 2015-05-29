@@ -3,6 +3,9 @@ Optellen
 <p id="optellen"></p>
 Vermenigvuldigen
 <p id="local"></p>
+
+
+
 <script>
     
 var a = 8, b = 4;   
@@ -15,5 +18,9 @@ function optellen(a, b)
     //a en b zijn andere variabelen buiten de functie als binnen de functie. a = a + 2;
     return a + b;
 }
+    
+    
+
 
 </script>
+
