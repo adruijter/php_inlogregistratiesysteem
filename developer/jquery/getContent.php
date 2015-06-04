@@ -72,8 +72,8 @@ button
         });
         
         $("#btnSeventh").click(function(){
-            $("ul#getContent li:last").appendTo("ul#getContent li:first");
-            $("ul#getContent li:nth-child(4)").prependTo("ul#getContent li:first");
+            $("ul#getContent li:last").insertAfter("ul#getContent li:first");
+            $("ul#getContent li:nth-child(4)").insertBefore("ul#getContent li:first");
         }); 
         
         // insertAfter() , Maak een nieuwe knop met tellertje die een nieuw listitem toevoegd aan de ul#getContent. In ieder nieuw listitem staat hoeveel keer er op de knop is gedrukt.

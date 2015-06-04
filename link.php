@@ -73,6 +73,11 @@
                             Intro
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/json/testpagina01'>
+                            Testpagina01
+                        </a>
+                      </li>
                       <li id='javascriptgame'>
                         JS Game
                       </li>
@@ -134,6 +139,16 @@
                             Get Content
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/setContent'>
+                            Set Content
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/css_classes'>
+                            CSS Classes
+                        </a>
+                      </li>                      
                       <li id='php'>
 						PHP
 					  </li>
