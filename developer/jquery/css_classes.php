@@ -13,8 +13,7 @@
     height: 200px;
     background-color: rgba(114, 114, 92, 0.7);
     border: 3px solid yellow;
-    padding: 1em;
-    
+    padding: 1em;    
 }
     
 button
@@ -61,7 +60,7 @@ Ik ben een normale div
     });
     
     $("#btnToggleClass").click(function(){
-        //alert("Halldoan");
+        //alert("Hallo");
         
         $("#changeDiv").toggleClass("normaleDiv")
                        .toggleClass("gekkeDiv");

@@ -148,7 +148,12 @@
                         <a href='index.php?content=developer/jquery/css_classes'>
                             CSS Classes
                         </a>
-                      </li>                      
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/css'>
+                            CSS
+                        </a>
+                      </li>
                       <li id='php'>
 						PHP
 					  </li>
