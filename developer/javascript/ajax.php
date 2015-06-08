@@ -4,6 +4,14 @@
 
 <button id="btn">Klik op mij</button>
 
+<select id='slct'>
+    <option value='empty'> kies een persoon</option>
+    <option value='test'> Arjan de Ruijter</option>
+
+
+</select>
+
+<!-- maak een selecttag die alle personen in de users tabel selecteert en er maar 8 weergeeft, als je hem uitklapt -->
 
 
 <script>
@@ -18,7 +26,10 @@
             if ( xmlhttp.readyState == 4 && xmlhttp.status == 200 )
             {
                 var dataText = xmlhttp.responseText;
-                document.getElementById("data").innerHTML = dataText;            
+                var dataText = JSON.parse(dataText);
+                
+                
+                document.getElementById("data").innerHTML = dataText.namen[0].firstname;            
             }           
         }
         
@@ -31,6 +42,14 @@
         
         xmlhttp.open("POST", "http://localhost/2014-2015/fotosjaak.esy.es/developer/javascript/data.php", true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.send("id=102&telefoon=0612345678");
+        xmlhttp.send("id=102&lastname=Pley");
+    }
+    
+    
+    document.getElementById("slct").onfocus = function()
+    {
+        //alert("Het event werkt");
+        
+        
     }
 </script>
