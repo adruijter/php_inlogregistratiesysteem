@@ -19,7 +19,7 @@ var naamobj = { "voornaam" : "Arjan",
 document.getElementsByTagName("p")[0].innerHTML = "Mijn naam is: " + naamobj.voornaam + " " + naamobj.tussenvoegsel + " " + naamobj.achternaam ;
     
 document.getElementsByTagName("p")[1].innerHTML = naamobj.volledigeNaam() + naamobj.lievelingsKleuren[1] + naamobj.leeftijd;
-
+// Dit is wat commentaar.
 </script>
 
 
