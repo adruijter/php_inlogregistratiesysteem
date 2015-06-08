@@ -31,6 +31,6 @@
         
         xmlhttp.open("POST", "http://localhost/2014-2015/fotosjaak.esy.es/developer/javascript/data.php", true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.send("id=94&telefoon=0612345678");
+        xmlhttp.send("id=102&telefoon=0612345678");
     }
 </script>
