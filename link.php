@@ -65,6 +65,16 @@
                             bmi meter
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/ajax'>
+                            Ajax
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/javascriptobjecten'>
+                            javascriptobjecten
+                        </a>
+                      </li>
                       <li id='json'>
                         JSON
                       </li>
