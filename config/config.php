@@ -1,7 +1,5 @@
 <?php
-
 $witch_server = $_SERVER['SERVER_ADDR'];
-//echo $witch_server;exit();
 switch ($witch_server)
 {
     case '::1':
