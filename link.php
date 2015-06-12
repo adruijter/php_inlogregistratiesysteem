@@ -164,6 +164,26 @@
                             CSS
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/ancestors'>
+                            Ancestors
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/descendants'>
+                            Descendants
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/siblings'>
+                            Siblings
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/jquery/filtering'>
+                            Filtering
+                        </a>
+                      </li>
                       <li id='php'>
 						PHP
 					  </li>

@@ -43,9 +43,7 @@ ul#css li
               //Hieronder staat een alternatief namelijk een JS object
             */
             
-            var cssOpmaak = { "background-color" : "red",
-                              "border" : "10px solid green",
-                              "margin" : "1em"};
+            var cssOpmaak = { "background-color" : "rgba(39, 0, 255, 0.58)", "border" : "1px solid green", "margin" : "2em"};
             
             $('ul#css li').css(cssOpmaak);
             

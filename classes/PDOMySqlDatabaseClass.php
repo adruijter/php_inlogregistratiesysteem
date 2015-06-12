@@ -13,14 +13,30 @@
 		//Constructor
 		public function __construct()
 		{
-			$this->db_connection = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASENAME);
-		
+			try 
+            {
+                $this->db_connection = new PDO("mysql:host=".SERVERNAME."; dbname=".DATABASENAME, USERNAME, PASSWORD);
+                $this->db_connection.setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                echo "De connectie met de server is succesvol";
+            }
+            catch(PDOException $e)
+            {
+                echo "De connectie met de server is niet gelukt. Foutmelding: ". $e->getMessage();
+            }		
 		}	
 		
 		//Methods
 		public function fire_query($query)
 		{
-			$result = mysqli_query($this->db_connection, $query);
+			try 
+            {
+                $this->db_connection
+            }
+            catch(PDOException e)
+            {
+                
+            }
+            $result = mysqli_query($this->db_connection, $query);
 			return $result;
 		}
 	}
