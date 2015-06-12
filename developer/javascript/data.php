@@ -27,17 +27,24 @@
         $data = '{ "namen" : [';
         foreach($statement->fetchAll() as $key => $value)
         {
-            $data .=  '{ "id" : "'.$value['id'].'", "firstname" : "'.$value['firstname'].'", "infix" : "'.$value['infix'].'", "lastname" : "'.$value['lastname'].'"}, ';
+            $data .=  '{ "id" : "'.$value['id'].'", "firstname" : "'.$value['firstname'].'", "infix" : "'.$value['infix'].'", "lastname" : "'.$value['lastname'];
+            
+            if ($key == $statement->rowCount() - 1)
+            {
+                $data .='"}]}';
+            }
+            else
+            {
+                $data .= '"}, ';
+            }
         }
-        $data .= '{ "id" : "", "firstname" : "", "infix" : "", "lastname" : ""}]}';
+        
     }
     catch(PDOException $e)
     {
         echo "Dit is een PDO foutmelding, de volgende fout heeft plaatsgevonden: ".$e->getMessage();
     }
 
-
-    //$data = $_POST['id']." - Arjan de Ruijter is mijn naam, mobiel: ".$_POST['telefoon'];
     echo $data;
 ?>
 
