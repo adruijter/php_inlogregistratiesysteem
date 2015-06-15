@@ -31,7 +31,7 @@
                 var text = "";
                 for (var i = 0; i < dataText.namen.length; i++)
                 {
-                    text += dataText.namen[i].id + " | " + dataText.namen[i].firstname + " | " + dataText.namen[i].id + " | " + dataText.namen[i].lastname + "<br>";
+                    text += dataText.namen[i].id + " | " + dataText.namen[i].firstname + " | " + dataText.namen[i].infix + " | " + dataText.namen[i].lastname + "<br>";
                 }
                 document.getElementById("data").innerHTML =  text;            
             }           
