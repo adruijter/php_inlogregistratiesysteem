@@ -28,8 +28,8 @@
                 var dataText = xmlhttp.responseText;
                 var dataText = JSON.parse(dataText);
                 
-                
-                document.getElementById("data").innerHTML = dataText.namen[0].firstname;            
+                for ()
+                document.getElementById("data").innerHTML = dataText.namen[0].id + " | " + dataText.namen[0].firstname + " | " + dataText.namen[0].id + " | " + dataText.namen[0].lastname + " | " + dataText.namen.length;            
             }           
         }
         
