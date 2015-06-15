@@ -75,6 +75,11 @@
                             javascriptobjecten
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/jsontest'>
+                            JSON test
+                        </a>
+                      </li>
                       <li id='json'>
                         JSON
                       </li>
