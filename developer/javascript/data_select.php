@@ -4,6 +4,14 @@
     $username = "rra_blok1_am1a";
     $password = "geheim";
     $databasename = "blok1-am1a";
+    if (isset($_POST['id']))
+    {
+       $extra = " WHERE ........."; 
+    }
+    else
+    {
+        $extra = "";
+    }
 
     try
     {
@@ -18,17 +26,17 @@
         $lastname = $_POST['lastname'];
         */
         
-        $statement = $connection->prepare("SELECT `id`, `firstname`, `infix`, `lastname` FROM `users`");
+        $statement = $connection->prepare("SELECT `id` FROM `users`".$extra);
               
         $statement->execute();
         
         $result = $statement->setFetchMode(PDO::FETCH_ASSOC);
         
         
-        $data = '{ "namen" : [';
+        $data = '{ "records" : [';
         foreach($statement->fetchAll() as $key => $value)
         {
-            $data .=  '{ "id" : "'.$value['id'].'", "firstname" : "'.$value['firstname'].'", "infix" : "'.$value['infix'].'", "lastname" : "'.$value['lastname'];
+            $data .=  '{ "id" : "'.$value['id'];
             
             if ($key == $statement->rowCount() - 1)
             {
