@@ -80,6 +80,11 @@
                             JSON test
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/ajax_select'>
+                            Ajax select
+                        </a>
+                      </li>
                       <li id='json'>
                         JSON
                       </li>
