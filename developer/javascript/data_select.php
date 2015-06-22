@@ -39,7 +39,9 @@
         foreach($statement->fetchAll() as $key => $value)
         {
             $data .=  '{ "id" : "'.$value['id'];
-            $data .=  '{ "firstname" : "'.$value['firstname'];   
+            $data .=  '", "firstname" : "'.$value['firstname'];
+            $data .=  '", "infix" : "'.$value['infix'];
+            $data .=  '", "lastname" : "'.$value['lastname'];
             
             if ($key == $statement->rowCount() - 1)
             {
