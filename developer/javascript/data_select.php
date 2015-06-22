@@ -3,14 +3,22 @@
     $servername = "localhost";
     $username = "rra_blok1_am1a";
     $password = "geheim";
-    $databasename = "blok1-am1a";
+    $databasename = "blok1-am1a"; 
 
-   
+    if (isset($_POST['id']))
+    {
+        $extra = "WHERE `id` = '".$_POST['id']."'";
+    }
+    else
+    {
+        $extra = "";
+    }
 
     try
     {
         $connection = new PDO("mysql:host=".$servername.";dbname=".$databasename, $username, $password);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
         /*
         $statement = $connection->prepare("SELECT `id`, `firstname`, `infix`, `lastname` FROM `users` WHERE `id` = :id AND `lastname` = :lastname");
         $statement->bindParam(':id', $id);
@@ -20,7 +28,7 @@
         $lastname = $_POST['lastname'];
         */
         
-        $statement = $connection->prepare("SELECT `id`, `firstname`, `infix`, `lastname` FROM `users`");
+        $statement = $connection->prepare("SELECT `id`, `firstname`, `infix`, `lastname` FROM `users`".$extra);
               
         $statement->execute();
         
@@ -30,7 +38,8 @@
         $data = '{ "records" : [';
         foreach($statement->fetchAll() as $key => $value)
         {
-            $data .=  '{ "id" : "'.$value['id'];   
+            $data .=  '{ "id" : "'.$value['id'];
+            $data .=  '{ "firstname" : "'.$value['firstname'];   
             
             if ($key == $statement->rowCount() - 1)
             {
@@ -48,6 +57,7 @@
         echo "Dit is een PDO foutmelding, de volgende fout heeft plaatsgevonden: ".$e->getMessage();
     }
     
-    echo $data;        
+    
+    echo $data; 
 ?>
 

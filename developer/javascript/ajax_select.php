@@ -8,13 +8,13 @@
 </select>
 
 <script>
-    var xmlhttp = new XMLHttpRequest();
- 
+    
+    
+     
     
     document.getElementById("slct").onmouseover = function()
     {
-        //alert("Het event werkt");
-        //var xmlhttp = new XMLHttpRequest();
+        var xmlhttp = new XMLHttpRequest(); 
         
         xmlhttp.onreadystatechange = function()
         {
@@ -43,25 +43,24 @@
     
     document.getElementById("slct").onchange = function(){
         
-        var id = this.children[this.selectedIndex].value;
+        var id = this.children[this.selectedIndex].value; 
+        alert("Hallo" + id);
         
-       
+        var xmlhttp1 = new XMLHttpRequest();
         
-        //xmlhttp1 = new XMLHttpRequest();
-        //alert("Hallo");
-        
-        xmlhttp.onreadystatechange = function()
+        xmlhttp1.onreadystatechange = function()
         {
-            
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+            //alert(xmlhttp1.readyState + " | " + xmlhttp1.status);
+            if (xmlhttp1.readyState == 4 && xmlhttp1.status == 200)
             {
-                var result = xmlhttp.responseText;
-                alert(result);
-            }            
-        }  
-         
-        xmlhttp.open("POST", "http://localhost/2014-2015/fotosjaak.esy.es/developer/javascript/data_select.php", true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.send("id=" + id);    
+                alert(xmlhttp1.responseText);
+            }
+        }
+        
+        
+        xmlhttp1.open("POST", "http://localhost/2014-2015/fotosjaak.esy.es/developer/javascript/data_select.php", true);
+        xmlhttp1.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp1.send("id=" + id + "&test=testerdetest");      
+        
     }
 </script>
