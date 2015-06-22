@@ -4,9 +4,10 @@
     $username = "rra_blok1_am1a";
     $password = "geheim";
     $databasename = "blok1-am1a";
+
     if (isset($_POST['id']))
     {
-       $extra = " WHERE ........."; 
+       $extra = " WHERE `id` = '".$_POST['id']."'";
     }
     else
     {
@@ -26,7 +27,7 @@
         $lastname = $_POST['lastname'];
         */
         
-        $statement = $connection->prepare("SELECT `id` FROM `users`".$extra);
+        $statement = $connection->prepare("SELECT `id`, `firstname`, `infix`, `lastname` FROM `users`");
               
         $statement->execute();
         
