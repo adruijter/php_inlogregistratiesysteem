@@ -85,6 +85,11 @@
                             Ajax select
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/ajax_foto'>
+                            Ajax foto
+                        </a>
+                      </li>
                       <li id='json'>
                         JSON
                       </li>
