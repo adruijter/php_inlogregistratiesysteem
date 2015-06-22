@@ -27,7 +27,7 @@
         $lastname = $_POST['lastname'];
         */
         
-        $statement = $connection->prepare("SELECT `id`, `firstname`, `infix`, `lastname` FROM `users`");
+        $statement = $connection->prepare("SELECT `id`, `firstname`, `infix`, `lastname` FROM `users`".$extra);
               
         $statement->execute();
         
@@ -38,6 +38,9 @@
         foreach($statement->fetchAll() as $key => $value)
         {
             $data .=  '{ "id" : "'.$value['id'];
+            $data .=  '", "firstname" : "'.$value['firstname'];
+            $data .=  '", "infix" : "'.$value['infix'];
+            $data .=  '", "lastname" : "'.$value['lastname'];          
             
             if ($key == $statement->rowCount() - 1)
             {
