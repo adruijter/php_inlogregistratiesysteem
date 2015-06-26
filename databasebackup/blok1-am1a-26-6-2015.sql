@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Machine: localhost
--- Genereertijd: 02 feb 2015 om 07:57
--- Serverversie: 5.6.12-log
--- PHP-versie: 5.4.12
+-- Machine: 127.0.0.1
+-- Gegenereerd op: 26 jun 2015 om 09:32
+-- Serverversie: 5.6.17
+-- PHP-versie: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Databank: `blok1-am1a`
 --
-CREATE DATABASE IF NOT EXISTS `blok1-am1a` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `blok1-am1a`;
 
 -- --------------------------------------------------------
 
@@ -36,10 +34,10 @@ CREATE TABLE IF NOT EXISTS `login` (
   `activated` enum('yes','no') NOT NULL DEFAULT 'no',
   `activationdate` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=107 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=110 ;
 
 --
--- Gegevens worden uitgevoerd voor tabel `login`
+-- Gegevens worden geëxporteerd voor tabel `login`
 --
 
 INSERT INTO `login` (`id`, `email`, `password`, `userrole`, `activated`, `activationdate`) VALUES
@@ -54,7 +52,33 @@ INSERT INTO `login` (`id`, `email`, `password`, `userrole`, `activated`, `activa
 (103, 'bertvanwagendonk@gmail.com', '772a412d385a889add7fc31cfece6d19', 'customer', 'no', '2015-01-26 10:10:52'),
 (104, 'jdeb@gmail.com', 'e8636ea013e682faf61f56ce1cb1ab5c', 'customer', 'yes', '2015-01-26 10:19:55'),
 (105, 'lvanl@gmail.com', '4e3f24dc03ba6c9b3806ef1a64e46a45', 'customer', 'no', '2015-01-26 10:45:48'),
-(106, 'tvana@gmail.com', 'e8636ea013e682faf61f56ce1cb1ab5c', 'customer', 'yes', '2015-01-26 10:54:57');
+(106, 'tvana@gmail.com', 'e8636ea013e682faf61f56ce1cb1ab5c', 'customer', 'yes', '2015-01-26 10:54:57'),
+(107, 'b.van.amelsd@gmail.com', '8f891247345e0154f946282dc7b48fc3', 'customer', 'no', '2015-02-19 15:39:17'),
+(108, 'j.van.raven@gmail.com', 'de3e79d9289337ccdf6b078d0404f118', 'customer', 'no', '2015-02-19 15:41:33'),
+(109, 't.de.Bok@gmail.com', 'e8636ea013e682faf61f56ce1cb1ab5c', 'customer', 'yes', '2015-02-19 15:43:11');
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `products`
+--
+
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `photo_name` varchar(200) NOT NULL,
+  `photo_description` text NOT NULL,
+  `photo_path` varchar(400) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `products`
+--
+
+INSERT INTO `products` (`id`, `photo_name`, `photo_description`, `photo_path`) VALUES
+(1, 'ghostboy', 'Boek over een jongen', 'http://localhost/2014-2015/fotosjaak.esy.es/images/boeken/ghostboy.jpg'),
+(2, 'netrunner', 'Boek over een netrunner', 'http://localhost/2014-2015/fotosjaak.esy.es/images/boeken/netrunner.jpg'),
+(3, 'Top Ten Greek Islands', 'Boek over Griekse eilanden', 'http://localhost/2014-2015/fotosjaak.esy.es/images/boeken/toptengreekislands.jpg');
 
 -- --------------------------------------------------------
 
@@ -71,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
 
 --
--- Gegevens worden uitgevoerd voor tabel `user`
+-- Gegevens worden geëxporteerd voor tabel `user`
 --
 
 INSERT INTO `user` (`id`, `voornaam`, `tussenvoegsel`, `achternaam`) VALUES
@@ -98,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Gegevens worden uitgevoerd voor tabel `users`
+-- Gegevens worden geëxporteerd voor tabel `users`
 --
 
 INSERT INTO `users` (`id`, `firstname`, `infix`, `lastname`) VALUES
@@ -106,14 +130,17 @@ INSERT INTO `users` (`id`, `firstname`, `infix`, `lastname`) VALUES
 (96, 'jan', 'de', 'administrator'),
 (97, 'bert', 'van', 'Root'),
 (98, 'harry', 'de', 'Photographer'),
-(99, 'arjan', 'de', 'Developer'),
+(99, 'Arjan', 'de', 'Ruijter'),
 (100, 'peter', 'de', 'pannenkoek'),
 (101, 'peter', 'de', 'pannenkoek'),
 (102, 'Herman', 'van der', 'Pley'),
 (103, 'Bert', 'van', 'Wagendonk'),
 (104, 'Jelke', 'de', 'Belke'),
 (105, 'Victor', 'van', 'Leeuwendonk'),
-(106, 'Terry', 'van', 'Amersfoort');
+(106, 'Terry', 'van', 'Amersfoort'),
+(107, 'Bert', 'van', 'Amelsdonk'),
+(108, 'Johan', 'van', 'Ravenzwaaij'),
+(109, 'Trudy', 'de', 'Bok');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

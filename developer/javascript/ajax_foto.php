@@ -25,7 +25,7 @@ p#data img
     
     document.getElementById("slct").onmouseover = function()
     {
-        document.getElementById("data").innerHTML = "<img src='http://localhost/2014-2015/fotosjaak.esy.es/images/boeken/ghostboy.jpg' alt='boek'>";
+        document.getElementById("data").innerHTML = "<img src='http://localhost/2014-2015/fotosjaak.esy.es/images/boeken/ghostboy.jpg' alt='boek'><p>Een boek over een jongen</p>";
         xmlhttp.onreadystatechange = function()
         {
             //alert(xmlhttp.readyState + " | " + xmlhttp.status);
@@ -56,17 +56,19 @@ p#data img
         var id = this.children[this.selectedIndex].value; 
         //alert("Hallo" + id);
         
-        var xmlhttp = new XMLHttpRequest();
+        //var xmlhttp = new XMLHttpRequest();
         
         xmlhttp.onreadystatechange = function()
         {
             //alert(xmlhttp1.readyState + " | " + xmlhttp1.status);
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
             {
-                //alert(xmlhttp1.responseText);
+                //alert(xmlhttp.responseText);
                 var result = xmlhttp.responseText;
                 var obj = JSON.parse(result);
-                document.getElementById("data").innerHTML = obj.records[0].id + " | " + obj.records[0].firstname + " | " + obj.records[0].infix + " | " + obj.records[0].lastname;
+                //alert(obj.records[0].photopath);
+                document.getElementById("data").innerHTML = "<img src='" + obj.records[0].photopath + "' alt='" + obj.records[0].photoname + "'><p>" + obj.records[0].photodescription + "</p>";
+                
             }
         }      
         

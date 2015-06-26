@@ -90,6 +90,11 @@
                             Ajax foto
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/ajax_create'>
+                            Ajax create
+                        </a>
+                      </li>
                       <li id='json'>
                         JSON
                       </li>

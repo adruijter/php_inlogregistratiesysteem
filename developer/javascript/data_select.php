@@ -7,29 +7,31 @@
 
     if (isset($_POST['id']))
     {
-        $extra = "WHERE `id` = '".$_POST['id']."'";
+        $id = $_POST['id'];
+        $fields = "";
+        $sql_extension = ' WHERE `id` = :id';
     }
     else
     {
-        $extra = "";
+        $id = '';
+        $fields = "";
+        $sql_extension = '';
     }
 
     try
     {
         $connection = new PDO("mysql:host=".$servername.";dbname=".$databasename, $username, $password);
-        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        //$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
-        /*
-        $statement = $connection->prepare("SELECT `id`, `firstname`, `infix`, `lastname` FROM `users` WHERE `id` = :id AND `lastname` = :lastname");
+        $sql = "SELECT `id`, `firstname`, `infix`, `lastname` FROM `users`";
+        $sql .= $sql_extension;
+        
+        $statement = $connection->prepare($sql);
+        
         $statement->bindParam(':id', $id);
-        $statement->bindParam(':lastname', $lastname);
         
-        $id = $_POST['id'];
-        $lastname = $_POST['lastname'];
-        */
-        
-        $statement = $connection->prepare("SELECT `id`, `firstname`, `infix`, `lastname` FROM `users`".$extra);
-              
+        //$id = $test;
+         
         $statement->execute();
         
         $result = $statement->setFetchMode(PDO::FETCH_ASSOC);
