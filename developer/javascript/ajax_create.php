@@ -55,7 +55,8 @@ Foto adres: <input type='text' id='photo_path' />
         }
         
         xmlhttp.open("POST", "http://localhost/2014-2015/fotosjaak.esy.es/developer/javascript/data_create.php", true);
-        xmlhttp.send();
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+        xmlhttp.send("photo_name=" + photo_name + "&photo_description=" + photo_description + "&photo_path=" + photo_path);
         
     }
 
