@@ -12,7 +12,7 @@
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
                 
-        if (isset($_POST['photo_name']))
+        if (!empty($_POST))           
         {        
             $statement = $connection->prepare("INSERT INTO `products` (`id`, `photo_name`, `photo_description`, `photo_path`) VALUES (NULL, :photo_name, :photo_description, :photo_path)");
             $statement->bindParam(':photo_name', $_POST['photo_name']);

@@ -22,10 +22,9 @@ p#p_create
 
 
 <h3>Op deze pagina gaan we een gegeven asynchroon wegschrijven naar een database</h3>
-
-Fotonaam: <input type='text' id='photo_name' />
+Fotonaam: <input type='text' id='photo_name'/>
 Foto beschrijving: <textarea rows=4 cols=20 id='photo_description'></textarea>
-Foto adres: <input type='text' id='photo_path' />
+Foto adres: <input type='text' id='photo_path'/>
 <p id="p_create"></p>
 <button id='btn'>Verstuur</button>
 
