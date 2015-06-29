@@ -95,6 +95,16 @@
                             Ajax create
                         </a>
                       </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/ajax_todo'>
+                            Ajax todo
+                        </a>
+                      </li>
+                      <li>
+                        <a href='index.php?content=developer/javascript/ajax_create_todo'>
+                            Ajax create todo
+                        </a>
+                      </li>
                       <li id='json'>
                         JSON
                       </li>
